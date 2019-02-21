@@ -1,6 +1,6 @@
-
 inpath = "data/merchandise_values_annual_dataset.csv"
 outpath = "data/output.tsv"
+
 
 def main():
 	connections = []
