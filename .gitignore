@@ -1,3 +1,4 @@
 data/*
 link_analysis/*
-.idea/
+.idea/*
+output-data/*
