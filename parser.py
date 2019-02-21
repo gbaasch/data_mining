@@ -13,6 +13,10 @@ def main():
 				newConn = [line[1], line[3]]
 				if newConn not in connections:
 					connections.append(newConn)
+			if line[7].startswith("\"Imports"):
+				newConn = [line[3], line[1]]
+				if newConn not in connections:
+					connections.append(newConn)
 
 	with open(outpath, 'w+') as outfile:
 		for i in range(4):
