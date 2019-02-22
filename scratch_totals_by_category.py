@@ -1,4 +1,4 @@
-inpath = "C:/Workspace/data_mining/data/merchandise_values_annual_dataset.csv"
+inpath = "data/merchandise_values_annual_dataset.csv"
 
 categories = ['Total merchandise', 'Agricultural products', 'Manufactures',
 				'Fuels and mining products', 'Food', 'Clothing', 'Textiles',
@@ -14,19 +14,20 @@ categories = ['Total merchandise', 'Agricultural products', 'Manufactures',
 				'Personal and household goods', 'Non-ferrous metals',
 				'Miscellaneous manufactures', 'Other transport equipment', 'Fish']
 
+encoding = "ISO-8859-1"
 
-def main():
+
+def main(encoding):
 	category_dict_import = {}
 	category_dict_export = {}
 	importTotal = 0
 	exportTotal = 0
-	with open(inpath, 'r') as infile:
+	with open(inpath, 'r', encoding=encoding) as infile:
 		lines = infile.readlines()[1:]
 
 		for line in lines:
 			line = line.split('","')
 			import_type_val = category_dict_import.get(line[5])
-
 
 			if line[7].startswith("Exports"):
 				#if line[0].startswith("\"AF"):
@@ -37,7 +38,7 @@ def main():
 			if line[7].startswith("Imports"):
 				#if line[2].startswith("\"AF"):
 				importTotal += float(line[-4])
-				import_type_val = category_dict_export.get(line[5])
+				import_type_val = category_dict_import.get(line[5])
 				import_type_val = 0 if import_type_val is None else import_type_val + float(line[-4])
 				category_dict_import[line[5]] = import_type_val
 
@@ -50,13 +51,17 @@ def main():
 	for key in categories:
 		export = 0 if category_dict_export.get(key) is None else category_dict_export.get(key)
 		importt = 0 if category_dict_import.get(key) is None else category_dict_import.get(key)
+		print(key + ' ====================')
 		if export:
-			print(key, (export - importt) / export, export / exportTotal)
+			print("ratio of missing vals in import: ", (export - importt) / export)
+			print("ratio of exports to total: ", export / exportTotal)
 		else:
-			print(key + " does not exist")
+			print("does not exist")
+		print("\n")
 
 	print(category_dict_export)
 	print(category_dict_import)
 
+
 if __name__ == '__main__':
-	main()
+	main(encoding)
