@@ -18,6 +18,7 @@ def main(encoding='utf-8',
     outpath = outpath.format(filename, start_year, end_year)
 
     connections = []
+    connectionValues = {}
     with open(inpath, 'r', encoding=encoding) as infile:
         lines = infile.readlines()[1:]
 
@@ -25,17 +26,28 @@ def main(encoding='utf-8',
             line = line.split('","')
             if not start_year <= int(line[8]) <= end_year:
                 continue
+            conVal = float(line[10])
+
+            # skip conns with value 0
+            if conVal == 0:
+                continue
             if include_exports:
                 if line[7].startswith("Exports"):
-                    newConn = [line[1], line[3]]
+                    newConn = (line[1], line[3])
                     if newConn not in connections:
                         connections.append(newConn)
+                        connectionValues[newConn] = conVal
+                    else:
+                        connectionValues[newConn] = connectionValues[newConn] + conVal
 
             if include_imports:
                 if line[7].startswith("Imports"):
                     newConn = [line[3], line[1]]
                     if newConn not in connections:
                         connections.append(newConn)
+                        connectionValues[newConn] = conVal
+                    else:
+                        connectionValues[newConn] = connectionValues[newConn] + conVal
 
     with open(outpath, 'w+', encoding=encoding) as outfile:
         for i in range(4):
@@ -43,8 +55,9 @@ def main(encoding='utf-8',
         for conn in connections:
             for item in conn:
                 outfile.write(str(item) + "\t")
+            outfile.write(str(connectionValues[conn]))
             outfile.write("\n")
 
 
 if __name__ == '__main__':
-    main(encoding, include_imports=False, start_year=2000, end_year=2000)
+    main(encoding, include_imports=False) #, start_year=2000, end_year=2000)
