@@ -2,3 +2,5 @@ data/*
 link_analysis/*
 .idea/*
 output-data/*
+.idea/misc.xml
+
