@@ -3,4 +3,5 @@ link_analysis/*
 .idea/*
 output-data/*
 .idea/misc.xml
-
+.idea/workspace.xml
+.ipynb_checkpoints/
