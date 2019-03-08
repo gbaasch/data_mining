@@ -17,6 +17,7 @@ def sum_probabilities(key, previous_vec, out_links, in_links, weighted):
                 out_links_from_here = out_links.get(link)
                 weight_sum = sum(out_links_from_here.values())
                 weights_indv = out_links_from_here.get(key)
+                weight_sum = 1 if weight_sum == 0 else weight_sum
                 weighted_prob = weights_indv / weight_sum
                 total_sum += (previous_vec[link] * weighted_prob)
         else:

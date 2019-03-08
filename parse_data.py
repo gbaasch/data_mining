@@ -36,6 +36,7 @@ categories = [
     'Miscellaneous manufactures', 'Other transport equipment', 'Fish'
 ]
 
+
 def add_weighted_connection(line, connections, connections_with_weights):
     """ In this function we will create a dictionary that has the reporter_description and
     partner_description as the key, and the export value as the value
@@ -87,9 +88,11 @@ def parse_exports(encoding='utf-8', start_year=1950, end_year=2017, category=Non
     # specify the outpath for the file that is created
     if category:
         outpath = 'output-data/categorical/exports-{}-{}-category-{}.tsv'
+        category_filename = category.replace(" ", "_")
     else:
         outpath = 'output-data/exports-{}-{}-category-{}.tsv'
-    outpath = outpath.format(start_year, end_year, category)
+        category_filename = 'None'
+    outpath = outpath.format(start_year, end_year, category_filename)
 
     connections = []
     connections_with_weights = {}
