@@ -1,3 +1,5 @@
+import os
+
 encoding = "ISO-8859-1"
 inpath = "data/merchandise_values_annual_dataset.csv"
 
@@ -59,18 +61,22 @@ def add_weighted_connection(line, connections, connections_with_weights):
         connections_with_weights[new_connection] = new_weight
 
 
-def write_connections_to_file(outpath, connections, connections_with_weights):
-    with open(outpath, 'w+', encoding=encoding) as outfile:
-        # we just have this to match the format from the homework
-        for i in range(4):
-            outfile.write("#this is an empty line\n")
-        for conn in connections:
-            # TODO just iterate over dict
-            for item in conn:
-                outfile.write(str(item) + "\t")
+def write_connections_to_file(outfile, outdir, connections, connections_with_weights):
+    outpath = outdir + outfile
+    try:
+        with open(outpath, 'w+', encoding=encoding) as outfile:
+            # we just have this to match the format from the homework
+            for i in range(4):
+                outfile.write("#this is an empty line\n")
+            for conn in connections:
+                # TODO just iterate over dict
+                for item in conn:
+                    outfile.write(str(item) + "\t")
 
-            outfile.write(str(connections_with_weights[conn]))
-            outfile.write("\n")
+                outfile.write(str(connections_with_weights[conn]))
+                outfile.write("\n")
+    except FileNotFoundError as e:
+        os.makedirs(outdir)
 
 
 def parse_exports(encoding='utf-8', start_year=1950, end_year=2017, category=None):
@@ -86,13 +92,18 @@ def parse_exports(encoding='utf-8', start_year=1950, end_year=2017, category=Non
     :return: This does not return anything but it does create a file
     """
     # specify the outpath for the file that is created
+    if start_year == end_year:
+        outdir = 'output-data/{}/categorical/'
+        outdir = outdir.format(start_year)
+    else:
+        outdir = 'output-data/categorical/'
+
+    outfile = 'exports-{}-{}-category-{}.tsv'
     if category:
-        outpath = 'output-data/categorical/exports-{}-{}-category-{}.tsv'
         category_filename = category.replace(" ", "_")
     else:
-        outpath = 'output-data/exports-{}-{}-category-{}.tsv'
         category_filename = 'None'
-    outpath = outpath.format(start_year, end_year, category_filename)
+    outfile = outfile.format(start_year, end_year, category_filename)
 
     connections = []
     connections_with_weights = {}
@@ -112,13 +123,15 @@ def parse_exports(encoding='utf-8', start_year=1950, end_year=2017, category=Non
                 # we are creating an output file with columns From, To
                 add_weighted_connection(line, connections, connections_with_weights)
 
-    write_connections_to_file(outpath, connections, connections_with_weights)
+    write_connections_to_file(outfile, outdir, connections, connections_with_weights)
 
 
 if __name__ == '__main__':
     # this specifies what to run if this file as ran as a script
     parse_exports(encoding)
-    for category in categories:
-        parse_exports(encoding, category=category)
+    for parse_year in range(1948, 2018):
+        for category in categories:
+            print('parsing for year: {}, category: {}'.format(parse_year, category))
+            parse_exports(encoding, category=category, start_year=parse_year, end_year=parse_year)
     print("Done")
 

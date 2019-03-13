@@ -1,3 +1,4 @@
+import os
 from link_analysis.deadends import get_deadends
 from link_analysis.utils import create_dicts
 import operator
@@ -35,7 +36,7 @@ def update_probabilities(out_links, in_links, previous_vec, tax=None, weighted=F
             new_vec[key] = beta*total_sum + tax
         else:
             new_vec[key] = total_sum
-    print(new_vec)
+    # print(new_vec)
     return new_vec
 
 
@@ -65,7 +66,7 @@ def compute_page_rank(filename, weighted=False, encoding='utf-8', tax=None):
     for v, val in vec.items():
         sum_vec += val
 
-    print(sum_vec)
+    # print(sum_vec)
 
     # Page Rank with dead ends
     # if remove_deadends:
@@ -86,3 +87,4 @@ def print_page_ranks(vec, filename):
         for key, value in vec[:-1]:
             f.write(str(value)+'\t'+str(key)+'\n')
         f.write(str(vec[-1][1])+'\t'+str(vec[-1][0]))
+
