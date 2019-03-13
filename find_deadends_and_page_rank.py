@@ -20,7 +20,7 @@ if __name__ == '__main__':
     weighted = True
     if not test:
         directory = 'weighted' if weighted else 'unweighted'
-        # deadends, _, _ = get_deadends(infile, encoding="ISO-8859-1", weighted=weighted)
+        deadends, _, _ = get_deadends(infile, encoding="ISO-8859-1", weighted=weighted)
         # print("\ndeadends: ", deadends)
 
         for category in categories:
