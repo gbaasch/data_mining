@@ -7,10 +7,11 @@
       <change afterPath="$PROJECT_DIR$/link_analysis/page_rank.py" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/link_analysis/test_page_rank.tsv" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/link_analysis/utils.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/similar_items/association_analysis.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/similar_items/association_analysis_2.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/similar_items/create_itemsets_file.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/eda.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/eda.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/find_deadends_and_page_rank.py" beforeDir="false" afterPath="$PROJECT_DIR$/find_deadends_and_page_rank.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/parse_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/parse_data.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -22,39 +23,43 @@
     <session id="-778430146">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="1" />
+          <entry key="project.closed" value="6" />
+          <entry key="project.open.time.1" value="3" />
           <entry key="project.open.time.12" value="1" />
           <entry key="project.open.time.4" value="1" />
-          <entry key="project.opened" value="2" />
+          <entry key="project.open.time.6" value="1" />
+          <entry key="project.opened" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="csv" value="1" />
           <entry key="gitignore" value="2" />
-          <entry key="py" value="20" />
+          <entry key="png" value="1" />
+          <entry key="py" value="28" />
           <entry key="tsv" value="62" />
           <entry key="txt" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
+          <entry key="Image" value="1" />
           <entry key="PLAIN_TEXT" value="67" />
-          <entry key="Python" value="20" />
+          <entry key="Python" value="28" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="Python Console" value="124" />
-          <entry key="dummy" value="18" />
+          <entry key="Python Console" value="516" />
+          <entry key="dummy" value="23" />
           <entry key="gitignore" value="25" />
-          <entry key="py" value="2275" />
+          <entry key="py" value="7004" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PLAIN_TEXT" value="43" />
-          <entry key="Python" value="2399" />
+          <entry key="PLAIN_TEXT" value="48" />
+          <entry key="Python" value="7520" />
         </counts>
       </usages-collector>
     </session>
@@ -62,104 +67,35 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/parse_data.py">
+        <entry file="file://$PROJECT_DIR$/similar_items/create_itemsets_file.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="246">
-              <caret line="77" column="34" selection-start-line="77" selection-start-column="34" selection-end-line="77" selection-end-column="34" />
+            <state relative-caret-position="153">
+              <caret line="19" column="4" selection-start-line="19" selection-start-column="4" selection-end-line="19" selection-end-column="4" />
               <folding>
-                <marker date="1552446158312" expanded="true" signature="2471:3033" ph="..." />
-                <marker date="1552446158312" expanded="true" signature="3116:3121" ph="..." />
+                <marker date="1553056685661" expanded="true" signature="271:425" ph="..." />
+                <marker date="1553056685661" expanded="true" signature="1126:2059" ph="..." />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/link_analysis/deadends.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="26" column="28" selection-start-line="26" selection-start-column="28" selection-end-line="26" selection-end-column="28" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/find_deadends_and_page_rank.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="280">
-              <caret line="32" column="67" selection-start-line="32" selection-start-column="67" selection-end-line="32" selection-end-column="67" />
-              <folding>
-                <element signature="e#0#9#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/output-data/page_ranks/by_year/weighted/2000-Telecommunications_equipment.tsv">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="640">
-              <caret line="55" column="14" selection-start-line="55" selection-start-column="14" selection-end-line="55" selection-end-column="14" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/output-data/page_ranks/by_year/weighted/2000-Textiles.tsv">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="235">
-              <caret line="43" column="31" selection-start-line="43" selection-start-column="29" selection-end-line="43" selection-end-column="31" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/output-data/page_ranks/by_year/weighted/2008-Manufactures.tsv">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="167">
-              <caret line="35" column="49" selection-start-line="35" selection-start-column="49" selection-end-line="35" selection-end-column="49" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/data/merchandise_values_added_page_ranks.csv">
-          <provider selected="true" editor-type-id="LargeFileEditor">
-            <state relative-caret-position="404">
-              <caret line="9297" column="26" selection-start-line="9297" selection-start-column="26" selection-end-line="9297" selection-end-column="26" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/../../lab/lab_8/recommendation.py">
+        <entry file="file://$PROJECT_DIR$/similar_items/association_analysis_2.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="123">
-              <caret line="36" column="11" lean-forward="true" selection-start-line="36" selection-start-column="11" selection-end-line="36" selection-end-column="11" />
-              <folding>
-                <marker date="1552507424339" expanded="true" signature="808:945" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/link_analysis/utils.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="366">
-              <caret line="33" selection-start-line="33" selection-end-line="33" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/link_analysis/page_rank.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="261">
-              <caret line="82" column="17" selection-start-line="82" selection-start-column="17" selection-end-line="82" selection-end-column="17" />
+            <state relative-caret-position="57">
+              <caret line="148" column="24" selection-start-line="148" selection-start-column="24" selection-end-line="148" selection-end-column="24" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/parse_data.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="405">
+              <caret line="113" column="36" selection-start-line="113" selection-start-column="35" selection-end-line="113" selection-end-column="36" />
             </state>
           </provider>
         </entry>
@@ -179,10 +115,14 @@
       <find>value</find>
       <find>agri</find>
       <find>Argentina</find>
-      <find>outfile</find>
       <find>infile</find>
       <find>af</find>
       <find>afg</find>
+      <find>outfile</find>
+      <find>indicat</find>
+      <find>0.8</find>
+      <find>threshold</find>
+      <find>print</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -200,13 +140,20 @@
         <option value="$PROJECT_DIR$/link_analysis/page_rank.py" />
         <option value="$PROJECT_DIR$/find_deadends_and_page_rank.py" />
         <option value="$PROJECT_DIR$/../../lab/lab_8/recommendation.py" />
+        <option value="$PROJECT_DIR$/create_itemsets.py" />
+        <option value="$PROJECT_DIR$/create_itemsets_file.py" />
+        <option value="$PROJECT_DIR$/similar-items/association_analysis.py" />
+        <option value="$PROJECT_DIR$/similar_items/create_itemsets_file.py" />
+        <option value="$PROJECT_DIR$/similar_items/association_analysis.py" />
+        <option value="$PROJECT_DIR$/similar_items/association_analysis_2.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" fullScreen="true">
-    <option name="y" value="23" />
-    <option name="width" value="1280" />
-    <option name="height" value="709" />
+    <option name="x" value="45" />
+    <option name="y" value="43" />
+    <option name="width" value="984" />
+    <option name="height" value="688" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -214,7 +161,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -231,11 +177,17 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="preferences.sourceCode" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/similar-items" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -249,7 +201,28 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.degree">
+  <component name="RunManager" selected="Python.association_analysis">
+    <configuration name="association_analysis" type="PythonConfigurationType" factoryName="Python">
+      <module name="data_mining" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="/usr/local/bin/python3.6" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/similar_items" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/similar_items/association_analysis_2.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="degree" type="PythonConfigurationType" factoryName="Python">
       <module name="data_mining" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -295,6 +268,7 @@
     <list>
       <item itemvalue="Python.parse_data" />
       <item itemvalue="Python.degree" />
+      <item itemvalue="Python.association_analysis" />
     </list>
   </component>
   <component name="SvnConfiguration">
@@ -321,21 +295,22 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1437649" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2573471" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4980143" weight="0.32876712" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49722" weight="0.28356165" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49563146" weight="0.32876712" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.8490866" weight="0.3369863" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49960285" weight="0.32876712" />
-      <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.49960285" weight="0.32876712" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="8" sideWeight="0.8602065" visible="true" weight="0.5027397" />
-      <window_info anchor="bottom" id="Python Console" order="9" sideWeight="0.49722" weight="0.32876712" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.13979349" side_tool="true" visible="true" weight="0.5027397" />
+      <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.4980143" weight="0.32876712" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" sideWeight="0.8602065" visible="true" weight="0.22328767" />
+      <window_info anchor="bottom" id="Python Console" order="9" sideWeight="0.4892772" weight="0.34246576" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.13979349" side_tool="true" visible="true" weight="0.22328767" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -347,8 +322,71 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <default-breakpoints>
+        <breakpoint type="python-exception">
+          <properties notifyOnTerminate="true" exception="BaseException">
+            <option name="notifyOnTerminate" value="true" />
+          </properties>
+        </breakpoint>
+      </default-breakpoints>
+    </breakpoint-manager>
+  </component>
   <component name="debuggerHistoryManager">
+    <expressions id="evaluateCodeFragment">
+      <expression>
+        <expression-string>x.head()</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>x['Indicator_description'].value_counts().index</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>x</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>data</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>data_exports</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
+    </expressions>
     <expressions id="evaluateExpression">
+      <expression>
+        <expression-string>frequent_item_supports.get(('Clothing', 'Integrated circuits and electronic components'))</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>frequent_item_supports.get(('Integrated circuits and electronic components', 'Clothing'))</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>frequent_item_supports.get('Integrated circuits and electronic components', 'Clothing')</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>frequent_supports[1:]</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>x.columns</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
       <expression>
         <expression-string>category_data</expression-string>
         <language-id>Python</language-id>
@@ -372,28 +410,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/output-data/categorical/exports-1950-2017-category-Clothing.tsv">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/output-data/categorical/exports-1950-2017-category-Fuels.tsv">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/output-data/categorical/exports-1950-2017-category-Fish.tsv">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/output-data/categorical/exports-1950-2017-category-Miscellaneous_manufactures.tsv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/output-data/categorical/exports-1950-2017-category-Electronic_data_processing_and_office_equipment.tsv">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/output-data/categorical/exports-1950-2017-category-Chemicals.tsv">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/output-data/categorical/exports-1950-2017-category-Total_merchandise.tsv">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -537,21 +553,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="116">
           <caret line="46" column="8" selection-start-line="46" selection-start-column="8" selection-end-line="46" selection-end-column="8" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-            <marker date="1552015884667" expanded="true" signature="516:528" ph="..." />
-            <marker date="1552015884667" expanded="true" signature="738:739" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/kaggle_stats.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/link_analysis/utils.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="366">
-          <caret line="33" selection-start-line="33" selection-end-line="33" />
         </state>
       </provider>
     </entry>
@@ -559,37 +560,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
           <caret line="26" column="28" selection-start-line="26" selection-start-column="28" selection-end-line="26" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/parse_data.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="246">
-          <caret line="77" column="34" selection-start-line="77" selection-start-column="34" selection-end-line="77" selection-end-column="34" />
-          <folding>
-            <marker date="1552446158312" expanded="true" signature="2471:3033" ph="..." />
-            <marker date="1552446158312" expanded="true" signature="3116:3121" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/link_analysis/page_rank.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="261">
-          <caret line="82" column="17" selection-start-line="82" selection-start-column="17" selection-end-line="82" selection-end-column="17" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/find_deadends_and_page_rank.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="32" column="67" selection-start-line="32" selection-start-column="67" selection-end-line="32" selection-end-column="67" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -607,13 +577,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data/merchandise_values_added_page_ranks.csv">
-      <provider selected="true" editor-type-id="LargeFileEditor">
-        <state relative-caret-position="404">
-          <caret line="9297" column="26" selection-start-line="9297" selection-start-column="26" selection-end-line="9297" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/output-data/page_ranks/by_year/weighted/2000-Telecommunications_equipment.tsv">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="640">
@@ -624,9 +587,94 @@
     <entry file="file://$PROJECT_DIR$/../../lab/lab_8/recommendation.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="123">
-          <caret line="36" column="11" lean-forward="true" selection-start-line="36" selection-start-column="11" selection-end-line="36" selection-end-column="11" />
+          <caret line="36" column="11" selection-start-line="36" selection-start-column="11" selection-end-line="36" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/merchandise_values_added_page_ranks.csv">
+      <provider selected="true" editor-type-id="LargeFileEditor">
+        <state relative-caret-position="404">
+          <caret line="9297" column="26" selection-start-line="9297" selection-start-column="26" selection-end-line="9297" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../assignments/assignment_1/run_script.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/link_analysis/utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="33" selection-start-line="33" selection-end-line="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/link_analysis/page_rank.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="305">
+          <caret line="82" column="17" selection-start-line="82" selection-start-column="17" selection-end-line="82" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/output_58_15.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kaggle_stats.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/find_deadends_and_page_rank.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="32" column="67" selection-start-line="32" selection-start-column="67" selection-end-line="32" selection-end-column="67" />
           <folding>
-            <marker date="1552507424339" expanded="true" signature="808:945" ph="..." />
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/parse_data.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="113" column="36" selection-start-line="113" selection-start-column="35" selection-end-line="113" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/similar_items/association_analysis.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="84" column="55" lean-forward="true" selection-start-line="84" selection-start-column="55" selection-end-line="84" selection-end-column="55" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+            <marker date="1553050898946" expanded="true" signature="443:532" ph="..." />
+            <marker date="1553050898946" expanded="true" signature="635:638" ph="..." />
+            <marker date="1553050898946" expanded="true" signature="3180:3573" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/pydevd.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="794">
+          <caret line="1663" selection-start-line="1663" selection-end-line="1663" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/similar_items/create_itemsets_file.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="19" column="4" selection-start-line="19" selection-start-column="4" selection-end-line="19" selection-end-column="4" />
+          <folding>
+            <marker date="1553056685661" expanded="true" signature="271:425" ph="..." />
+            <marker date="1553056685661" expanded="true" signature="1126:2059" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/similar_items/association_analysis_2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="148" column="24" selection-start-line="148" selection-start-column="24" selection-end-line="148" selection-end-column="24" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
           </folding>
         </state>
       </provider>
