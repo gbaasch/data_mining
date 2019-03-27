@@ -93,7 +93,10 @@ def parse_exports(encoding='utf-8', start_year=1950, end_year=2017, category=Non
     """
     # specify the outpath for the file that is created
     if start_year == end_year:
-        outdir = 'output-data/{}/categorical/'
+        if category:
+            outdir = 'output-data/{}/categorical/'
+        else:
+            outdir = 'output-data/all-categories/{}/'
         outdir = outdir.format(start_year)
     else:
         outdir = 'output-data/categorical/'
@@ -128,10 +131,15 @@ def parse_exports(encoding='utf-8', start_year=1950, end_year=2017, category=Non
 
 if __name__ == '__main__':
     # this specifies what to run if this file as ran as a script
-    parse_exports(encoding)
-    for parse_year in range(1948, 2018):
-        for category in categories:
-            print('parsing for year: {}, category: {}'.format(parse_year, category))
-            parse_exports(encoding, category=category, start_year=parse_year, end_year=parse_year)
+    # parse_exports(encoding)
+    # for parse_year in range(1948, 2018):
+    #     for category in categories:
+    #         print('parsing for year: {}, category: {}'.format(parse_year, category))
+    #         parse_exports(encoding, category=category, start_year=parse_year, end_year=parse_year)
+    # print("Done")
+
+    for parse_year in range(2000, 2018):
+        print('parsing for year: {}'.format(parse_year))
+        parse_exports(encoding, start_year=parse_year, end_year=parse_year)
     print("Done")
 
