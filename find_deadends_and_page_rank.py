@@ -8,17 +8,19 @@ from parse_data import categories
 
 infile = 'output-data/{}/categorical/exports-{}-{}-category-{}.tsv'
 outfile = 'output-data/page_ranks/by_year/{}/{}-{}.tsv'
+ROOT_DIR = os.path.dirname(os.path.abspath(__file__))  # This is your Project Root
 
 
 def test_weighted_page_rank(weighted):
-    infile = './link_analysis/test-page_rank.tsv'
+    # infile = './link_analysis/test-page_rank.tsv'
+    infile = os.path.join(ROOT_DIR, 'link_analysis/test_page_rank.tsv')
     test_vec = compute_page_rank(infile, weighted=weighted, tax=None)
     print(test_vec)
 
 
 if __name__ == '__main__':
-    test = False
-    weighted = False
+    test = True
+    weighted = True
     if not test:
         directory = 'weighted' if weighted else 'unweighted'
         # deadends, _, _ = get_deadends(infile, encoding="ISO-8859-1", weighted=weighted)
