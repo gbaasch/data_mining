@@ -1,5 +1,5 @@
-from data_mining import similarity_measures
-from data_mining.itemsets.similar_items.mini_hash import MiniHashTable
+from refactored_code_gaby import similarity_measures
+from refactored_code_gaby.itemsets.similar_items.mini_hash import MiniHashTable
 
 
 class FindSimilarItems:

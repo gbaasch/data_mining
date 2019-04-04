@@ -1,9 +1,9 @@
 import os
 import pandas as pd
 
-from refactored_code_gaby.network_analysis.directed_network import DirectedNetwork
-from refactored_code_gaby.network_analysis.undirected_network import UndirectedNetwork
-from refactored_code_gaby.network_analysis.page_rank import PageRank
+from refactored_code_gaby.network_analysis_old.directed_network import DirectedNetwork
+from refactored_code_gaby.network_analysis_old.undirected_network import UndirectedNetwork
+from refactored_code_gaby.network_analysis_old.page_rank import PageRank
 
 """
 Run this file to see the link analysis code working in practice with a test network.

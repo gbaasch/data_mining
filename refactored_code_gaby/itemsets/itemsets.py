@@ -10,6 +10,7 @@ class Itemsets:
         """
         self.itemsets = {}
         self.create_itemsets(df)
+        self.size = len(self.itemsets)
 
     def create_itemsets(self, df):
         for _, row in df.iterrows():

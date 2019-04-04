@@ -1,9 +1,9 @@
 import os
 import pandas as pd
 
-from data_mining.itemsets.itemsets import Itemsets
-from data_mining.itemsets.frequent_items.find_frequent_items import FindFrequentItems
-from data_mining.itemsets.similar_items.find_similar_items import FindSimilarItems
+from refactored_code_gaby.itemsets.itemsets import Itemsets
+from refactored_code_gaby.itemsets.frequent_items.find_frequent_items import FindFrequentItems
+from refactored_code_gaby.itemsets.similar_items.find_similar_items import FindSimilarItems
 
 """
 Run this file to see the link analysis code working in practice with a test network.
@@ -41,5 +41,5 @@ if __name__ == '__main__':
     for m in range(max_frequent_set_size):
         print(m+1, find_frequent.frequent_supports_for_setsizes.get(m+1))
     # Find association rules
-    association_rules = find_frequent.find_association_rules(2)
+    association_rules = find_frequent.find_association_rules(1)
     print("Found association rules:", association_rules)

@@ -21,9 +21,9 @@ class DirectedNetwork:
         """
         for _, row in df.iterrows():
             self.insert_link_in_dict(
-                row[1], row[0], row[2], self.in_links)
+                row[0], row[1], row[2], self.in_links)
             self.insert_link_in_dict(
-                row[0], row[1], row[2], self.out_links)
+                row[1], row[0], row[2], self.out_links)
 
     def set_and_remove_dead_ends(self):
         """
@@ -45,8 +45,7 @@ class DirectedNetwork:
                     if not out_links_to_remove:
                         self.out_links.pop(link)
                         # add newly found dead ends to the list
-                        self.dead_ends.append(link)
-
+                        dead_end.append(link)
 
     @staticmethod
     def insert_link_in_dict(key, value, weight, dict):
