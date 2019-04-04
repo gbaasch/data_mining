@@ -1,7 +1,5 @@
 import pandas as pd
 
-from parse_data import categories
-
 encoding = "ISO-8859-1"
 data_file = 'data/merchandise_values_annual_dataset.csv'
 data = pd.read_csv(data_file, '\t', encoding=encoding)

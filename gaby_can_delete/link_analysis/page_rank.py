@@ -1,6 +1,5 @@
-import os
-from link_analysis.deadends import get_deadends
-from link_analysis.utils import create_dicts
+from gaby_can_delete.link_analysis.deadends import get_deadends
+from gaby_can_delete.link_analysis.utils import create_dicts
 import operator
 
 

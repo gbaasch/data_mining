@@ -2,7 +2,7 @@ import os
 from itertools import combinations
 import pandas as pd
 
-from similar_items.create_itemsets_file import create_itemsets, create_itemsets_with_partner
+from gaby_can_delete.similar_items.create_itemsets_file import create_itemsets
 
 ROOT_DIR = os.path.dirname(os.path.abspath(__file__))
 

@@ -1,4 +1,4 @@
-from link_analysis.utils import create_dicts
+from gaby_can_delete.link_analysis.utils import create_dicts
 
 
 def remove_deadend(deadend, in_links, out_links, deadends):

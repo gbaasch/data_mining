@@ -2,9 +2,8 @@ import os
 from collections import OrderedDict
 from operator import itemgetter
 
-from link_analysis.deadends import get_deadends
-from link_analysis.page_rank import compute_page_rank, print_page_ranks
-from parse_data import categories
+from gaby_can_delete.link_analysis.page_rank import compute_page_rank, print_page_ranks
+from gaby_can_delete.parse_data import categories
 
 infile = 'output-data/{}/categorical/exports-{}-{}-category-{}.tsv'
 outfile = 'output-data/page_ranks/by_year/{}/{}-{}.tsv'

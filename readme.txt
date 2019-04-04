@@ -9,6 +9,7 @@ In future work we would refactor this code to make it faster and store informati
 Our data analysis process was interactive and iterative so, unlike a predictor, it is difficult to reproduce our results by running code once.
 Instead we have included a script that outputs some of the the results that we have included in the report.
 We have also attached the Jupyter notebooks that we used for data exploration and visualization.
+Note that we used the Jupyter notebooks as sandbox environments so they may not run out of the box. Even so, they may be a useful reference for our visualizations.
 
 If you only want to run certain parts of the script alter the boolean variables at the top of run_project.py
 
