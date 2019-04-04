@@ -8,13 +8,24 @@
       <change afterPath="$PROJECT_DIR$/link_analysis/page_rank.py" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/link_analysis/test_page_rank.tsv" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/link_analysis/utils.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/merge_annual_data_with_page_rank.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/refactored_code_gaby/network_analysis_old/directed_network.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/refactored_code_gaby/network_analysis_old/example/network_analysis_example.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/refactored_code_gaby/network_analysis_old/example/test_directed_network.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/refactored_code_gaby/network_analysis_old/example/test_undirected_network.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/refactored_code_gaby/network_analysis_old/page_rank.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/refactored_code_gaby/network_analysis_old/undirected_network.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/refactored_code_gaby/similarity_measures.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/run_project.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/eda.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/eda.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/find_deadends_and_page_rank.py" beforeDir="false" afterPath="$PROJECT_DIR$/find_deadends_and_page_rank.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/link_analysis/count_triangles.py" beforeDir="false" afterPath="$PROJECT_DIR$/link_analysis/count_triangles.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/parse_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/parse_data.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project_report.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/project_report.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/refactored_code_gaby/itemsets/example/example.py" beforeDir="false" afterPath="$PROJECT_DIR$/refactored_code_gaby/itemsets/example/example.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/refactored_code_gaby/itemsets/example/test_itemsets.csv" beforeDir="false" afterPath="$PROJECT_DIR$/refactored_code_gaby/itemsets/example/test_itemsets.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/refactored_code_gaby/itemsets/itemsets.py" beforeDir="false" afterPath="$PROJECT_DIR$/refactored_code_gaby/itemsets/itemsets.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/refactored_code_gaby/itemsets/similar_items/find_similar_items.py" beforeDir="false" afterPath="$PROJECT_DIR$/refactored_code_gaby/itemsets/similar_items/find_similar_items.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/refactored_code_gaby/network_analysis/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/refactored_code_gaby/network_analysis_old/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/refactored_code_gaby/network_analysis/directed_network.py" beforeDir="false" afterPath="$PROJECT_DIR$/refactored_code_gaby/network_analysis/directed_network.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/refactored_code_gaby/network_analysis/example/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/refactored_code_gaby/network_analysis_old/example/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/refactored_code_gaby/network_analysis/example/network_analysis_example.py" beforeDir="false" afterPath="$PROJECT_DIR$/refactored_code_gaby/network_analysis/example/network_analysis_example.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -26,115 +37,198 @@
     <session id="-778430146">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="8" />
-          <entry key="project.open.time.1" value="3" />
+          <entry key="project.closed" value="11" />
+          <entry key="project.open.time.1" value="4" />
           <entry key="project.open.time.12" value="1" />
-          <entry key="project.open.time.4" value="2" />
+          <entry key="project.open.time.4" value="3" />
           <entry key="project.open.time.6" value="1" />
+          <entry key="project.open.time.7" value="1" />
+          <entry key="project.open.time.8" value="1" />
           <entry key="project.open.time.9" value="1" />
-          <entry key="project.opened" value="8" />
+          <entry key="project.opened" value="12" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="csv" value="2" />
-          <entry key="gitignore" value="2" />
-          <entry key="png" value="1" />
-          <entry key="py" value="32" />
-          <entry key="tsv" value="62" />
-          <entry key="txt" value="2" />
+          <entry key="csv" value="11" />
+          <entry key="gitignore" value="3" />
+          <entry key="png" value="3" />
+          <entry key="py" value="81" />
+          <entry key="tsv" value="73" />
+          <entry key="txt" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Image" value="1" />
-          <entry key="PLAIN_TEXT" value="68" />
-          <entry key="Python" value="32" />
+          <entry key="CSV" value="9" />
+          <entry key="Image" value="3" />
+          <entry key="PLAIN_TEXT" value="70" />
+          <entry key="Python" value="81" />
+          <entry key="TSV" value="11" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="Python Console" value="516" />
+          <entry key="csv" value="1" />
           <entry key="dummy" value="23" />
           <entry key="gitignore" value="25" />
-          <entry key="py" value="7060" />
+          <entry key="py" value="13287" />
+          <entry key="txt" value="1222" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PLAIN_TEXT" value="48" />
-          <entry key="Python" value="7576" />
+          <entry key="CSV" value="1" />
+          <entry key="PLAIN_TEXT" value="1270" />
+          <entry key="Python" value="13803" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/similar_items/create_itemsets_file.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="469">
-              <caret line="45" column="50" selection-start-line="45" selection-start-column="50" selection-end-line="45" selection-end-column="50" />
-              <folding>
-                <marker date="1553056685661" expanded="true" signature="271:425" ph="..." />
-                <marker date="1553056685661" expanded="true" signature="1126:2059" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/similar_items/association_analysis_2.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="430">
-              <caret line="104" column="22" selection-start-line="104" selection-start-column="22" selection-end-line="104" selection-end-column="22" />
-              <folding>
-                <element signature="e#0#9#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/find_deadends_and_page_rank.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="40" column="77" selection-start-line="40" selection-start-column="77" selection-end-line="40" selection-end-column="89" />
-              <folding>
-                <element signature="e#0#9#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/merge_annual_data_with_page_rank.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="6">
-              <caret line="26" column="8" selection-start-line="26" selection-start-column="8" selection-end-line="26" selection-end-column="8" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/link_analysis/page_rank.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1215">
-              <caret line="84" selection-start-line="84" selection-end-line="84" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/parse_data.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1695">
-              <caret line="113" column="35" selection-start-line="113" selection-start-column="35" selection-end-line="113" selection-end-column="35" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <splitter split-orientation="horizontal" split-proportion="0.75459635">
+      <split-first>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/refactored_code_gaby/network_analysis_old/example/test_directed_network.csv">
+              <provider selected="true" editor-type-id="csv-text-editor" />
+              <provider editor-type-id="csv-table-editor">
+                <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/refactored_code_gaby/itemsets/example/example.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="384">
+                  <caret line="43" column="62" selection-start-line="43" selection-start-column="62" selection-end-line="43" selection-end-column="62" />
+                  <folding>
+                    <element signature="e#0#9#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/refactored_code_gaby/network_analysis/directed_network.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="-251">
+                  <caret line="21" column="36" selection-start-line="21" selection-start-column="36" selection-end-line="21" selection-end-column="36" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/refactored_code_gaby/network_analysis/example/network_analysis_example.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="162">
+                  <caret line="31" column="22" selection-start-line="31" selection-start-column="22" selection-end-line="31" selection-end-column="22" />
+                  <folding>
+                    <element signature="e#0#9#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/run_project.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="405">
+                  <caret line="123" column="25" selection-start-line="123" selection-start-column="25" selection-end-line="123" selection-end-column="25" />
+                  <folding>
+                    <element signature="e#0#19#0" expanded="true" />
+                    <marker date="1554352852665" expanded="true" signature="4732:5541" ph="..." />
+                    <marker date="1554352852665" expanded="true" signature="4733:5541" ph="..." />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/refactored_code_gaby/itemsets/itemsets.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="225">
+                  <caret line="15" column="22" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/refactored_code_gaby/itemsets/example/test_itemsets.csv">
+              <provider selected="true" editor-type-id="csv-text-editor">
+                <state relative-caret-position="105">
+                  <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
+                </state>
+              </provider>
+              <provider editor-type-id="csv-table-editor">
+                <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/refactored_code_gaby/network_analysis_old/example/test_undirected_network.csv">
+              <provider selected="true" editor-type-id="csv-text-editor" />
+              <provider editor-type-id="csv-table-editor">
+                <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/link_analysis/deadends.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="210">
+                  <caret line="14" column="4" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="4" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/merge_annual_data_with_page_rank.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="43">
+                  <caret line="29" column="39" selection-start-line="29" selection-start-column="39" selection-end-line="29" selection-end-column="39" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/refactored_code_gaby/itemsets/frequent_items/find_frequent_items.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="255">
+                  <caret line="17" column="43" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="43" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/find_deadends_and_page_rank.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="300">
+                  <caret line="42" column="41" selection-start-line="42" selection-start-column="41" selection-end-line="42" selection-end-column="41" />
+                  <folding>
+                    <element signature="e#0#9#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/link_analysis/page_rank.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="151">
+                  <caret line="50" column="41" selection-start-line="50" selection-start-column="41" selection-end-line="50" selection-end-column="41" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-second>
+    </splitter>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -162,6 +256,14 @@
       <find>weighted</find>
       <find>directory</find>
       <find>north american</find>
+      <find>similar</find>
+      <find>triangles.c</find>
+      <find>pd.read_</find>
+      <find>pd.read</find>
+      <find>developing as</find>
+      <find>epochs</find>
+      <find>to_</find>
+      <find>frequent_supports_for_setsizes</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -174,7 +276,6 @@
         <option value="$PROJECT_DIR$/parser.py" />
         <option value="$PROJECT_DIR$/link_analysis/average_degree_separation.py" />
         <option value="$PROJECT_DIR$/link_analysis/network_properties.py" />
-        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/parse_data.py" />
         <option value="$PROJECT_DIR$/link_analysis/page_rank.py" />
         <option value="$PROJECT_DIR$/../../lab/lab_8/recommendation.py" />
@@ -183,9 +284,22 @@
         <option value="$PROJECT_DIR$/similar-items/association_analysis.py" />
         <option value="$PROJECT_DIR$/similar_items/create_itemsets_file.py" />
         <option value="$PROJECT_DIR$/similar_items/association_analysis.py" />
-        <option value="$PROJECT_DIR$/find_deadends_and_page_rank.py" />
         <option value="$PROJECT_DIR$/merge_annual_data_with_page_rank.py" />
         <option value="$PROJECT_DIR$/similar_items/association_analysis_2.py" />
+        <option value="$PROJECT_DIR$/find_deadends_and_page_rank.py" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/refactored_code_gaby/run_project.py" />
+        <option value="$PROJECT_DIR$/readme.txt" />
+        <option value="$PROJECT_DIR$/refactored_code_gaby/network_analysis/undirected_network.py" />
+        <option value="$PROJECT_DIR$/refactored_code_gaby/itemsets/frequent_items/find_frequent_items.py" />
+        <option value="$PROJECT_DIR$/refactored_code_gaby/itemsets/similar_items/find_similar_items.py" />
+        <option value="$PROJECT_DIR$/refactored_code_gaby/network_analysis/example/network_analysis_example.py" />
+        <option value="$PROJECT_DIR$/refactored_code_gaby/network_analysis/directed_network.py" />
+        <option value="$PROJECT_DIR$/refactored_code_gaby/network_analysis/page_rank.py" />
+        <option value="$PROJECT_DIR$/refactored_code_gaby/itemsets/example/test_itemsets.csv" />
+        <option value="$PROJECT_DIR$/refactored_code_gaby/itemsets/example/example.py" />
+        <option value="$PROJECT_DIR$/refactored_code_gaby/itemsets/itemsets.py" />
+        <option value="$PROJECT_DIR$/run_project.py" />
       </list>
     </option>
   </component>
@@ -215,6 +329,50 @@
             <path>
               <item name="data_mining" type="b2602c69:ProjectViewProjectNode" />
               <item name="data_mining" type="462c0819:PsiDirectoryNode" />
+              <item name="refactored_code_gaby" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="data_mining" type="b2602c69:ProjectViewProjectNode" />
+              <item name="data_mining" type="462c0819:PsiDirectoryNode" />
+              <item name="refactored_code_gaby" type="462c0819:PsiDirectoryNode" />
+              <item name="itemsets" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="data_mining" type="b2602c69:ProjectViewProjectNode" />
+              <item name="data_mining" type="462c0819:PsiDirectoryNode" />
+              <item name="refactored_code_gaby" type="462c0819:PsiDirectoryNode" />
+              <item name="itemsets" type="462c0819:PsiDirectoryNode" />
+              <item name="example" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="data_mining" type="b2602c69:ProjectViewProjectNode" />
+              <item name="data_mining" type="462c0819:PsiDirectoryNode" />
+              <item name="refactored_code_gaby" type="462c0819:PsiDirectoryNode" />
+              <item name="network_analysis" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="data_mining" type="b2602c69:ProjectViewProjectNode" />
+              <item name="data_mining" type="462c0819:PsiDirectoryNode" />
+              <item name="refactored_code_gaby" type="462c0819:PsiDirectoryNode" />
+              <item name="network_analysis" type="462c0819:PsiDirectoryNode" />
+              <item name="example" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="data_mining" type="b2602c69:ProjectViewProjectNode" />
+              <item name="data_mining" type="462c0819:PsiDirectoryNode" />
+              <item name="refactored_code_gaby" type="462c0819:PsiDirectoryNode" />
+              <item name="network_analysis_old" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="data_mining" type="b2602c69:ProjectViewProjectNode" />
+              <item name="data_mining" type="462c0819:PsiDirectoryNode" />
+              <item name="refactored_code_gaby" type="462c0819:PsiDirectoryNode" />
+              <item name="network_analysis_old" type="462c0819:PsiDirectoryNode" />
+              <item name="example" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="data_mining" type="b2602c69:ProjectViewProjectNode" />
+              <item name="data_mining" type="462c0819:PsiDirectoryNode" />
               <item name="similar_items" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -229,8 +387,14 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/refactored_code" />
       <recent name="$PROJECT_DIR$/output-data/page_ranks/by_year" />
       <recent name="$PROJECT_DIR$/similar-items" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/refactored_code_gaby" />
+      <recent name="$PROJECT_DIR$" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -245,7 +409,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.association_analysis">
+  <component name="RunManager" selected="Python.run_project">
     <configuration name="association_analysis" type="PythonConfigurationType" factoryName="Python">
       <module name="data_mining" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -309,10 +473,32 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="run_project" type="PythonConfigurationType" factoryName="Python">
+      <module name="data_mining" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="/usr/local/bin/python3.6" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/run_project.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <list>
       <item itemvalue="Python.parse_data" />
       <item itemvalue="Python.degree" />
       <item itemvalue="Python.association_analysis" />
+      <item itemvalue="Python.run_project" />
     </list>
   </component>
   <component name="SvnConfiguration">
@@ -340,20 +526,20 @@
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1985703" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.0063542495" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49563146" weight="0.32876712" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.8490866" weight="0.3369863" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.69420177" weight="0.35342467" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.86258936" weight="0.4328767" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49960285" weight="0.32876712" />
       <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.4980143" weight="0.32876712" />
-      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.85861796" visible="true" weight="0.087671235" />
-      <window_info anchor="bottom" id="Python Console" order="9" sideWeight="0.4892772" weight="0.34246576" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.14138205" side_tool="true" visible="true" weight="0.087671235" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" sideWeight="0.85941225" visible="true" weight="0.2931507" />
+      <window_info anchor="bottom" id="Python Console" order="9" sideWeight="0.48768863" weight="0.34246576" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.14058776" side_tool="true" visible="true" weight="0.2931507" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -367,6 +553,23 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/link_analysis/page_rank.py</url>
+          <line>62</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/refactored_code_gaby/network_analysis/page_rank.py</url>
+          <line>13</line>
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/refactored_code_gaby/network_analysis/directed_network.py</url>
+          <line>14</line>
+          <option name="timeStamp" value="18" />
+        </line-breakpoint>
+      </breakpoints>
       <default-breakpoints>
         <breakpoint type="python-exception">
           <properties notifyOnTerminate="true" exception="BaseException">
@@ -379,27 +582,47 @@
   <component name="debuggerHistoryManager">
     <expressions id="evaluateCodeFragment">
       <expression>
+        <expression-string>directed_network.in_links.get('Afghanistan')</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>weighted_page_ranks.get('World')</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>weighted_page_ranks.get(w)</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>undirected_network.node_count</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>len(self.neighbours)</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>df_year.index</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>df.index</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
+      <expression>
         <expression-string>x.head()</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
       </expression>
       <expression>
         <expression-string>x['Indicator_description'].value_counts().index</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>x</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>data</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>data_exports</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
       </expression>
@@ -453,150 +676,10 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/output-data/categorical/exports-1950-2017-category-Other_machinery.tsv">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/output-data/categorical/exports-1950-2017-category-Machinery_and_transport_equipment.tsv">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/output-data/categorical/exports-1950-2017-category-Non-ferrous_metals.tsv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="141">
-          <caret line="75" column="37" selection-start-line="75" selection-start-column="37" selection-end-line="75" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/output-data/page_ranks/weighted/Automotive_products.tsv">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/output-data/page_ranks/weighted/Other_chemicals.tsv">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/output-data/page_ranks/test-weighted.tsv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="19" selection-start-line="18" selection-start-column="19" selection-end-line="18" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/output-data/page_ranks/weighted/Personal_and_household_goods.tsv">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/output-data/page_ranks/weighted/Raw_materials.tsv">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/output-data/page_ranks/weighted/Other_transport_equipment.tsv">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/output-data/page_ranks/weighted/Miscellaneous_manufactures.tsv">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/output-data/page_ranks/weighted/Food.tsv">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/output-data/page_ranks/weighted/Chemicals.tsv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="33" selection-start-line="19" selection-start-column="33" selection-end-line="19" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/output-data/page_ranks/weighted/Clothing.tsv">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/output-data/page_ranks/weighted/Electronic_data_processing_and_office_equipment.tsv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="20" lean-forward="true" selection-start-line="13" selection-start-column="20" selection-end-line="13" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/output-data/page_ranks/weighted/Transport_equipment.tsv">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/output-data/page_ranks/weighted/Ores_and_other_minerals.tsv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="32" column="31" selection-start-line="32" selection-start-column="31" selection-end-line="32" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/output-data/page_ranks/weighted/Office_and_telecom_equipment.tsv">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/output-data/page_ranks/weighted/Non-ferrous_metals.tsv">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/output-data/page_ranks/weighted/Machinery_and_transport_equipment.tsv">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/output-data/page_ranks/weighted/Fuels.tsv">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/output-data/page_ranks/weighted/Fish.tsv">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/output-data/page_ranks/weighted/Total_merchandise.tsv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/output-data/page_ranks/weighted/Textiles.tsv">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/output-data/page_ranks/weighted/Telecommunications_equipment.tsv">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/output-data/exports-1950-2017-category-None.tsv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1305">
-          <caret line="87" column="9" selection-start-line="87" selection-end-line="87" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/output-data/categorical/exports-1950-2017-category-Agricultural_products.tsv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1005">
-          <caret line="67" column="9" selection-start-line="67" selection-end-line="67" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/output-data/page_ranks/weighted/Agricultural_products.tsv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3840">
-          <caret line="256" column="13" selection-start-line="256" selection-start-column="4" selection-end-line="256" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/local/Cellar/python3/3.6.3/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/pandas/io/parsers.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="9630">
-          <caret line="685" selection-start-line="685" selection-end-line="685" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/kaggle_data_notes/category totals-imports-exports.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/kaggle_data_notes/totals vs wto.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/link_analysis/network_properties.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="116">
           <caret line="46" column="8" selection-start-line="46" selection-start-column="8" selection-end-line="46" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/link_analysis/deadends.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="26" column="28" selection-start-line="26" selection-start-column="28" selection-end-line="26" selection-end-column="28" />
         </state>
       </provider>
     </entry>
@@ -628,26 +711,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data/merchandise_values_added_page_ranks.csv">
-      <provider selected="true" editor-type-id="LargeFileEditor">
-        <state relative-caret-position="404">
-          <caret line="9297" column="26" selection-start-line="9297" selection-start-column="26" selection-end-line="9297" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../../assignments/assignment_1/run_script.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/link_analysis/utils.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="33" selection-start-line="33" selection-end-line="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/output_58_15.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/output_58_15.png" />
     <entry file="file://$PROJECT_DIR$/kaggle_stats.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -658,10 +725,202 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/similar_items/create_itemsets_file.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-471">
+          <caret line="31" column="4" selection-start-line="31" selection-start-column="4" selection-end-line="31" selection-end-column="4" />
+          <folding>
+            <marker date="1553056685661" expanded="true" signature="271:425" ph="..." />
+            <marker date="1553056685661" expanded="true" signature="1126:2059" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/similar_items/association_analysis.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="84" column="55" selection-start-line="84" selection-start-column="55" selection-end-line="84" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/link_analysis/utils.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/parse_data.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="537">
+          <caret line="113" column="35" selection-start-line="113" selection-start-column="35" selection-end-line="113" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/output_27_0.png" />
+    <entry file="file://$PROJECT_DIR$/output_58_6.png" />
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="19" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/readme.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="121" selection-start-line="7" selection-start-column="121" selection-end-line="7" selection-end-column="121" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/merchandise_values_added_page_ranks.csv">
+      <provider selected="true" editor-type-id="LargeFileEditor">
+        <state relative-caret-position="139403">
+          <caret line="9297" column="26" selection-start-line="9297" selection-start-column="26" selection-end-line="9297" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/Cellar/python3/3.6.3/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/pandas/core/common.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="145">
+          <caret line="406" selection-start-line="406" selection-end-line="406" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/merchandise_values_page_ranks_weighted_unweighted.csv">
+      <provider selected="true" editor-type-id="LargeFileEditor">
+        <state relative-caret-position="99">
+          <caret line="460" column="34" selection-start-line="460" selection-start-column="18" selection-end-line="460" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/output-data/page_ranks/by_year/weighted/2017-Integrated_circuits_and_electronic_components.tsv">
+      <provider selected="true" editor-type-id="csv-text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="35" lean-forward="true" selection-start-line="13" selection-start-column="35" selection-end-line="13" selection-end-column="35" />
+        </state>
+      </provider>
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/link_analysis/test_page_rank.tsv">
+      <provider selected="true" editor-type-id="csv-text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="5" selection-start-line="7" selection-start-column="5" selection-end-line="7" selection-end-column="5" />
+        </state>
+      </provider>
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/output-data/2000/categorical/exports-2000-2000-category-Agricultural_products.tsv">
+      <provider selected="true" editor-type-id="csv-text-editor">
+        <state relative-caret-position="-22102">
+          <caret line="13" column="32" lean-forward="true" selection-start-line="13" selection-start-column="32" selection-end-line="13" selection-end-column="32" />
+        </state>
+      </provider>
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/output-data/page_ranks/by_year/weighted/2000-Integrated_circuits_and_electronic_components.tsv">
+      <provider selected="true" editor-type-id="csv-text-editor" />
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/link_analysis/count_triangles.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="104" column="70" selection-start-line="104" selection-start-column="11" selection-end-line="104" selection-end-column="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/refactored_code_gaby/network_analysis_old/undirected_network.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-175">
+          <caret column="24" selection-start-column="24" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/output-data/page_ranks/by_year/weighted/2000-Agricultural_products.tsv">
+      <provider selected="true" editor-type-id="csv-text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="33" selection-start-line="13" selection-start-column="33" selection-end-line="13" selection-end-column="33" />
+        </state>
+      </provider>
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/refactored_code_gaby/network_analysis_old/directed_network.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="720">
+          <caret line="48" selection-start-line="48" selection-end-line="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/refactored_code_gaby/network_analysis_old/page_rank.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="222">
+          <caret line="36" selection-start-line="36" selection-end-line="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/Cellar/python3/3.6.3/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/pandas/core/frame.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="145">
+          <caret line="3105" selection-start-line="3105" selection-end-line="3105" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/similar_items/association_analysis_2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1455">
+          <caret line="97" column="49" selection-start-line="97" selection-start-column="27" selection-end-line="97" selection-end-column="49" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/refactored_code_gaby/itemsets/similar_items/mini_hash.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/refactored_code_gaby/similarity_measures.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/refactored_code_gaby/itemsets/similar_items/find_similar_items.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="52" lean-forward="true" selection-start-column="52" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/refactored_code_gaby/network_analysis_old/example/network_analysis_example.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="25" selection-start-line="5" selection-start-column="25" selection-end-line="5" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/refactored_code_gaby/network_analysis_old/example/test_undirected_network.csv">
+      <provider selected="true" editor-type-id="csv-text-editor" />
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/refactored_code_gaby/network_analysis_old/example/test_directed_network.csv">
+      <provider selected="true" editor-type-id="csv-text-editor" />
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/find_deadends_and_page_rank.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="40" column="77" selection-start-line="40" selection-start-column="77" selection-end-line="40" selection-end-column="89" />
+        <state relative-caret-position="300">
+          <caret line="42" column="41" selection-start-line="42" selection-start-column="41" selection-end-line="42" selection-end-column="41" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
           </folding>
@@ -670,62 +929,103 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/link_analysis/page_rank.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1215">
-          <caret line="84" selection-start-line="84" selection-end-line="84" />
+        <state relative-caret-position="151">
+          <caret line="50" column="41" selection-start-line="50" selection-start-column="41" selection-end-line="50" selection-end-column="41" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/parse_data.py">
+    <entry file="file://$PROJECT_DIR$/link_analysis/deadends.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1695">
-          <caret line="113" column="35" selection-start-line="113" selection-start-column="35" selection-end-line="113" selection-end-column="35" />
+        <state relative-caret-position="210">
+          <caret line="14" column="4" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="4" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data/merchandise_values_page_ranks_weighted_unweighted.csv">
-      <provider selected="true" editor-type-id="LargeFileEditor">
-        <state relative-caret-position="-116816">
-          <caret line="424" column="32" selection-start-line="424" selection-start-column="32" selection-end-line="424" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/similar_items/association_analysis.py">
+    <entry file="file://$PROJECT_DIR$/refactored_code_gaby/network_analysis/undirected_network.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-233">
-          <caret line="84" column="55" lean-forward="true" selection-start-line="84" selection-start-column="55" selection-end-line="84" selection-end-column="55" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-            <marker date="1553050898946" expanded="true" signature="443:532" ph="..." />
-            <marker date="1553050898946" expanded="true" signature="635:638" ph="..." />
-          </folding>
+        <state relative-caret-position="-411" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/refactored_code_gaby/network_analysis/page_rank.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="33" selection-start-line="1" selection-start-column="33" selection-end-line="1" selection-end-column="33" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/similar_items/create_itemsets_file.py">
+    <entry file="file://$PROJECT_DIR$/refactored_code_gaby/network_analysis/directed_network.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="469">
-          <caret line="45" column="50" selection-start-line="45" selection-start-column="50" selection-end-line="45" selection-end-column="50" />
-          <folding>
-            <marker date="1553056685661" expanded="true" signature="271:425" ph="..." />
-            <marker date="1553056685661" expanded="true" signature="1126:2059" ph="..." />
-          </folding>
+        <state relative-caret-position="-251">
+          <caret line="21" column="36" selection-start-line="21" selection-start-column="36" selection-end-line="21" selection-end-column="36" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/similar_items/association_analysis_2.py">
+    <entry file="file://$PROJECT_DIR$/refactored_code_gaby/network_analysis/example/test_directed_network.csv">
+      <provider selected="true" editor-type-id="csv-text-editor" />
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/refactored_code_gaby/itemsets/example/example.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="430">
-          <caret line="104" column="22" selection-start-line="104" selection-start-column="22" selection-end-line="104" selection-end-column="22" />
+        <state relative-caret-position="384">
+          <caret line="43" column="62" selection-start-line="43" selection-start-column="62" selection-end-line="43" selection-end-column="62" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
           </folding>
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/refactored_code_gaby/itemsets/example/test_itemsets.csv">
+      <provider selected="true" editor-type-id="csv-text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
+        </state>
+      </provider>
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/merge_annual_data_with_page_rank.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6">
-          <caret line="26" column="8" selection-start-line="26" selection-start-column="8" selection-end-line="26" selection-end-column="8" />
+        <state relative-caret-position="43">
+          <caret line="29" column="39" selection-start-line="29" selection-start-column="39" selection-end-line="29" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/refactored_code_gaby/itemsets/frequent_items/find_frequent_items.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="43" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/refactored_code_gaby/itemsets/itemsets.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="22" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/refactored_code_gaby/network_analysis/example/network_analysis_example.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="31" column="22" selection-start-line="31" selection-start-column="22" selection-end-line="31" selection-end-column="22" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/run_project.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="123" column="25" selection-start-line="123" selection-start-column="25" selection-end-line="123" selection-end-column="25" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+            <marker date="1554352852665" expanded="true" signature="4732:5541" ph="..." />
+            <marker date="1554352852665" expanded="true" signature="4733:5541" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -1,0 +1,5 @@
+from_node,to_node,weight
+A,B,9
+A,C,1
+B,A,1
+C,A,1
