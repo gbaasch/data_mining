@@ -97,6 +97,19 @@ def print_annual_exports_compared():
 			  str(annualExportKaggle[key] / 1000000 / annualExportWto[key]))
 
 
+def write_annual_exports_compared():
+	global annualExportWto, annualExportKaggle
+
+	# Just do common years: WTO is bigger than the kaggle set
+	keys = list(annualExportKaggle.keys())
+	keys.sort()
+	with open("wto_vs_kaggle.tsv", "w+") as outfile:
+		outfile.write("year\twto\tkaggle\n")
+		for key in keys:
+			outfile.write(str(key) + "\t" + str(annualExportWto[key]))
+			outfile.write("\t" + str(annualExportKaggle[key] / 1000000) + "\n")
+
+
 def parse_countries_kaggle(parsed):
 	global countriesKaggle
 	country = parsed[0]
@@ -117,12 +130,12 @@ def parse_countries_wto(parsed):
 # 	for c in wto:
 
 
-
 if __name__ == '__main__':
 	tic = time()
 	traverse_kaggle([calc_annual_exports_kaggle])
 	traverse_wto([calc_annual_exports_wto])
 	print_annual_exports_compared()
+	write_annual_exports_compared()
 
 	toc = time()
 	print("total processing time:", str(toc - tic), "seconds")

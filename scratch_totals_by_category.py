@@ -17,6 +17,16 @@ categories = ['Total merchandise', 'Agricultural products', 'Manufactures',
 encoding = "ISO-8859-1"
 
 
+def print_to_file(cat_dict_import, cat_dict_export):
+	with open("category_totals.tsv", "w+") as outfile:
+		for key in cat_dict_export.keys():
+			outfile.write(key + "\t" + str(cat_dict_export[key]) + "\t")
+			if key in cat_dict_import:
+				outfile.write(str(cat_dict_import[key]) + "\n")
+			else:
+				outfile.write("0\n")
+
+
 def main(encoding):
 	category_dict_import = {}
 	category_dict_export = {}
@@ -61,6 +71,7 @@ def main(encoding):
 
 	print(category_dict_export)
 	print(category_dict_import)
+	print_to_file(category_dict_import, category_dict_export)
 
 
 if __name__ == '__main__':

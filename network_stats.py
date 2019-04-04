@@ -1,5 +1,6 @@
 import matplotlib.pyplot as plt
 import os
+from simrank import WeightedDirectedGraph
 
 
 path = "C:/Workspace/data_mining/output-data"
@@ -132,7 +133,7 @@ def read_graph(filename):
 	return graph
 
 
-def calc_average_degree(graph):
+def calc_average_degree_commodity(graph):
 	totalNodes = len(graph.forwardEdges.keys())
 	if totalNodes == 0:
 		return 0
@@ -158,7 +159,40 @@ def count_sources(graph):
 	return totalSources
 
 
-if __name__ == '__main__':
+def degree_by_country():
+	inpath = "data/merchandise_values_annual_dataset.csv"
+	startIndex = 1948
+	graphs = []
+	mainGraph = DirectedGraph()
+	for i in range(1948, 2018):
+		graphs.append(DirectedGraph())
+
+	with open(inpath, 'r') as inFile:
+		for line in inFile.readlines():
+			split = line.split('","')
+			# Ignore lines that don't follow the expected input format
+			if not len(split) == 14 or not split[7].startswith("Exports"):
+				continue
+			year = int(split[8])
+			graphs[year-startIndex].add_edge(split[1], split[3])
+			mainGraph.add_edge(split[1], split[3])
+
+	countries = mainGraph.forwardEdges.keys()
+	years = range(1990, 2017)
+	for country in countries:
+		annualDegrees = []
+		for year in years:
+			degree = 0
+			if country in graphs[year-startIndex].forwardEdges:
+				degree = len(graphs[year-startIndex].forwardEdges[country])
+			annualDegrees.append(degree)
+		plt.plot(years, annualDegrees)
+
+	plt.axis([2000, 2018, 0, 35])
+	plt.show()
+
+
+def degree_by_commodity():
 	# grab data across years
 	years = range(1990, 2018)
 	# Initialize our lists of lists
@@ -176,7 +210,7 @@ if __name__ == '__main__':
 
 			graph = read_graph(filename)
 			catGraphs[i].append(graph)
-			catDegrees[i].append(calc_average_degree(graph))
+			catDegrees[i].append(calc_average_degree_commodity(graph))
 
 	# some demo work
 	# print(path)
@@ -201,5 +235,34 @@ if __name__ == '__main__':
 	# plt.setp(lines, color="r")
 	# plt.plot([1, 2, 3, 4], [4, 1, 7, 2])
 	# plt.axis([0, 6, 0, 20])
-	plt.axis([1990, 2020, 0, 22.75])
+	plt.axis([2000, 2018, 0, 25])
 	plt.show()
+
+
+def totals_by_entity():
+	inpath = "data/merchandise_values_annual_dataset.csv"
+	graph = WeightedDirectedGraph()
+	total = 0.0
+	with open(inpath, 'r') as inFile:
+		for line in inFile.readlines():
+			split = line.split('","')
+			# Ignore lines that don't follow the expected input format
+			if not len(split) == 14 or not split[7].startswith("Exports") or int(split[8]) < 2000:
+				continue
+			graph.add_edge(split[1], split[3], float(split[10]))
+			total += float(split[10])
+
+	revenue_ranks = []
+	for country in graph.forwardEdges.keys():
+		revenue_ranks.append((graph.nodeOutWeightsTotal[country] / total, country))
+
+	revenue_ranks.sort(reverse=True)
+	for rank in revenue_ranks:
+		print(rank)
+
+
+
+if __name__ == '__main__':
+	# degree_by_country()
+	degree_by_commodity()
+	# totals_by_entity()
