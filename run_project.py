@@ -13,15 +13,14 @@ from refactored_code_greg.weighted_jaccard import weighted_jaccard
 from refactored_code_greg.simrank import simrank_runner
 
 # Change these if you only want to run part of this script
-RUN_PAGERANK = False
-RUN_ASSOCIATION_RULES = False
-RUN_COUNTING_TRIANGLES = False
-RUN_KAGGLE_COMPARISON = True
+RUN_PAGERANK = True
+RUN_ASSOCIATION_RULES = True
+RUN_COUNTING_TRIANGLES = True
 RUN_DEGREES = True
 
-RUN_JACCARD = False
+RUN_JACCARD = True
 JACCARD_NODEID = "Canada"       # Country to compare to for Jaccard similarity
-RUN_SIMRANK = False
+RUN_SIMRANK = True
 SIMRANK_NODEID = "Canada"       # Country to compare to for simRank similarity
 
 # Constants
@@ -132,13 +131,6 @@ if __name__ == '__main__':
             print("Any time someone imports from {}, they also import from {} with {} confidence.".format(
                 rule[0][0], rule[1], rule[2]
             ))
-
-    # =============
-    # KAGGLE VS WTO DATASET
-    # ================
-    if RUN_KAGGLE_COMPARISON:
-        print("Kaggle comparison not implemented yet")
-        #TODO
 
     # =============
     # NETWORK DEGREE
