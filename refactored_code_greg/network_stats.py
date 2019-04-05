@@ -122,7 +122,7 @@ class DirectedGraph:
 				self.remove_edge(src, dst)
 
 	def build_from_file(filename):
-		with open(filename, 'r') as inFile:
+		with open(filename, 'r', encoding="ISO-8859-1") as inFile:
 			for line in inFile.readlines():
 				split = line.split("\t")
 				# Ignore lines that don't follow the expected input format
@@ -159,7 +159,7 @@ def degree_by_country(inpath="../data/merchandise_values_annual_dataset.csv"):
 		graphs.append(DirectedGraph())
 
 	# Read the file
-	with open(inpath, 'r') as inFile:
+	with open(inpath, 'r', encoding="ISO-8859-1") as inFile:
 		for line in inFile.readlines():
 			split = line.split('","')
 			# Ignore lines that don't follow the expected input format
@@ -208,7 +208,7 @@ def degree_by_commodity(inpath="../data/merchandise_values_annual_dataset.csv"):
 		catGraphs.append(oneYearGraphs)
 
 	# Read the file
-	with open(inpath, 'r') as inFile:
+	with open(inpath, 'r', encoding="ISO-8859-1") as inFile:
 		for line in inFile.readlines():
 			split = line.split('","')
 			# Ignore lines that don't follow the expected input format
@@ -248,7 +248,7 @@ def totals_by_entity(inpath="../data/merchandise_values_annual_dataset.csv"):
 	total = 0.0
 
 	# build graph, and track total exports recorded
-	with open(inpath, 'r') as inFile:
+	with open(inpath, 'r', encoding="ISO-8859-1") as inFile:
 		for line in inFile.readlines():
 			split = line.split('","')
 			# Ignore lines that don't follow the expected input format

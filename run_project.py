@@ -27,7 +27,7 @@ SIMRANK_NODEID = "Canada"       # Country to compare to for simRank similarity
 ROOT_DIR = os.path.dirname(os.path.abspath(__file__))
 DATA_FILE = os.path.join(ROOT_DIR, 'data/merchandise_values_annual_dataset.csv')
 CATEGORIES = [
-    'Total Merchandise', 'Agricultural products', 'Manufactures',
+    'Total merchandise', 'Agricultural products', 'Manufactures',
     'Fuels and mining products', 'Food', 'Clothing', 'Textiles',
     'Office and telecom equipment', 'Chemicals',
     'Machinery and transport equipment', 'Iron and steel',
@@ -64,8 +64,10 @@ if __name__ == '__main__':
         for year in range(2000, 2018):
             for category in CATEGORIES:
                 # calculated page ranks
-                df_year_cat = df_exports[(df_exports['Indicator_description'] == category) & (df_exports['Year'] == year)]
-                directed_network = DirectedNetwork(df_year_cat[['Reporter_description', 'Partner_description', 'Value']])
+                df_year_cat = df_exports[
+                    (df_exports['Indicator_description'] == category) & (df_exports['Year'] == year)]
+                directed_network = DirectedNetwork(
+                    df_year_cat[['Reporter_description', 'Partner_description', 'Value']])
                 pr_weighted = PageRank(directed_network, weighted=True, beta=None, epochs=10)
                 weighted_page_ranks = pr_weighted.get_page_ranks()
                 pr_unweighted = PageRank(directed_network, weighted=False)
@@ -79,7 +81,7 @@ if __name__ == '__main__':
                 df_list.append(df_weighted)
 
                 # only print example page ranks occasionally or they overwhelm the console
-                if category == 'Ores and other minerals ':
+                if category == 'Ores and other minerals':
                     w = 'Developing Asia'
                     print("Example PageRanks for {} in {}: \n\tWeighted: {}, Unweighted: {}".format(
                         w, year, weighted_page_ranks.get(w), unweighted_page_ranks.get(w)))
@@ -114,6 +116,10 @@ if __name__ == '__main__':
             print("Triangles for", year)
             print("\tExpected Triangles: {}, Actual Triangles: {}, Total Edges: {}, Total Vertices: {}".format(
                 expected_triangles, triangles, edges, nodes))
+            triangle_data.append([year, triangles, expected_triangles, nodes, edges])
+        df = pd.DataFrame(triangle_data,
+                          columns=['year', 'triangles', 'expected_triangles', 'num_nodes', 'num_edges'])
+        df.to_csv('output-data/triangles_new.csv')
 
     # =============
     # FREQUENT ITEMS AND ASSOCIATION RULE MINING

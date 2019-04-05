@@ -18,7 +18,7 @@ encoding = "ISO-8859-1"
 
 
 def print_to_file(cat_dict_import, cat_dict_export):
-	with open("category_totals.tsv", "w+") as outfile:
+	with open("category_totals.tsv", "w+", encoding="ISO-8859-1") as outfile:
 		for key in cat_dict_export.keys():
 			outfile.write(key + "\t" + str(cat_dict_export[key]) + "\t")
 			if key in cat_dict_import:

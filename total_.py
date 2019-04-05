@@ -42,7 +42,7 @@ def total_pagerank():
     contentDictionaries = []
     for filename in filenames:
         contentDictionary = {}
-        with open(filename, "r") as fileObject:
+        with open(filename, "r", encoding="ISO-8859-1") as fileObject:
             for line in fileObject.readlines():
 
                 if line.startswith("#"):
@@ -94,7 +94,7 @@ def total_revenue():
     countryList = []
     for filename in filenames:
 
-        with open(filename, "r") as fileObject:
+        with open(filename, "r", encoding="ISO-8859-1") as fileObject:
             rev_list = []
             for line in fileObject.readlines():
 

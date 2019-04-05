@@ -120,7 +120,7 @@ class WeightedDirectedGraph:
 	# Reads the export data from the wto dataset.
 	def build_from_file(self, filename):
 		self.__init__()
-		with open(filename, 'r') as inFile:
+		with open(filename, 'r', encoding="ISO-8859-1") as inFile:
 			for line in inFile.readlines():
 				split = line.split('","')
 				# Ignore lines that don't follow the expected input format
@@ -139,7 +139,7 @@ def print_sim_rank(filename, ranks):
 	printList.sort(reverse=True)
 
 	# Write one page rank and id pair per line
-	with open(filename, 'w+') as outfile:
+	with open(filename, 'w+', encoding="ISO-8859-1") as outfile:
 		outfile.write("PageRank\tIds\n")
 		for item in printList:
 			outfile.write(str(item[0]) + "\t" + str(item[1]) + "\n")

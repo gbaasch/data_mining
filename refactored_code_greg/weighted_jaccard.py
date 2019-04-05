@@ -25,7 +25,7 @@ def weighted_jaccard(startNode="North America", numToConsole=10, outpath = None,
 	countryTotalRevenues = {}		# indexed by country, holds total revenue
 
 	# Parse data
-	with open(inpath, "r") as infile:
+	with open(inpath, "r", encoding="ISO-8859-1") as infile:
 		for line in infile.readlines():
 			split = line.split('","')
 			# skip lines that aren't exports
@@ -105,7 +105,7 @@ def weighted_jaccard(startNode="North America", numToConsole=10, outpath = None,
 
 			# Print complete results to a file if outpath is provided
 			if outpath:
-				with open(outpath, "w+") as outFile:
+				with open(outpath, "w+", encoding="ISO-8859-1") as outFile:
 					for rank in ranks:
 						outFile.write(str(rank[0]) + "\t" + str(rank[1]) + "\n")
 
