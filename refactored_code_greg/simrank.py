@@ -11,11 +11,12 @@ taxVal = 0.5
 # Holds links accessible both from the source and destination nodes, to improve traversals
 class WeightedDirectedGraph:
 	def __init__(self):
-		self.forwardEdges = {}
-		self.backEdges = {}
-		self.weights = {}
-		self.nodeOutWeightsTotal = {}
+		self.forwardEdges = {}		# All edges leading away from a node, as a tuple
+		self.backEdges = {}			# All edges leading towards a node, as a tuple
+		self.weights = {}			# The weight of an edge, indexed by (fromNode, toNode)
+		self.nodeOutWeightsTotal = {}		# The combined weights of all edges leading away from a node
 
+	# Very simple output for debugging
 	def __str__(self):
 		output = ""
 		for key in self.forwardEdges:
@@ -29,10 +30,12 @@ class WeightedDirectedGraph:
 		try:
 			# Check for duplicate edge.
 			if toNode in self.forwardEdges[fromNode]:
+				# sum weights, then return
 				self.weights[(fromNode, toNode)] = self.weights[(fromNode, toNode)] + weight
 				self.nodeOutWeightsTotal[fromNode] += weight
 				return
 
+			# attempt to add the edge
 			prev = self.forwardEdges[fromNode]
 			self.forwardEdges[fromNode] = prev + (toNode,)
 			self.nodeOutWeightsTotal[fromNode] = self.nodeOutWeightsTotal[fromNode] + weight
@@ -55,13 +58,15 @@ class WeightedDirectedGraph:
 		return
 
 	# Recursively removes all dead ends in this graph
-	# Bad worst-case running time, but should perform well except for on graphs deliberately
-	# designed to break it.
+	# Bad worst-case running time, but should perform well except for on graphs deliberately designed to break it.
+	# returns list of node ids that have been removed
 	def remove_dead_ends(self):
 		removed = []
 		keys = tuple(self.forwardEdges.keys())
+		# Go through entire graph once
 		for key in keys:
 			try:
+				# remove if dead end, and check if this creates new dead ends
 				if len(self.forwardEdges[key]) == 0:
 					self._remove_dead_ends_recurse(key, removed)
 			# Node has already been removed by recursion. Don't worry
@@ -112,18 +117,16 @@ class WeightedDirectedGraph:
 			print("error")
 			sleep(0.1)
 
+	# Reads the export data from the wto dataset.
 	def build_from_file(self, filename):
 		self.__init__()
 		with open(filename, 'r') as inFile:
-			line = inFile.readline()
 			for line in inFile.readlines():
 				split = line.split('","')
 				# Ignore lines that don't follow the expected input format
 				if len(split) != 14 or split[7] != "Exports":
-					# print("bad line:")
-					# print(len(split), line)
-					# sleep(1)
 					continue
+				# parse the exporter, the partner, and the value traded
 				self.add_edge(split[1], split[3], float(split[10]))
 
 
@@ -140,6 +143,7 @@ def print_sim_rank(filename, ranks):
 		outfile.write("PageRank\tIds\n")
 		for item in printList:
 			outfile.write(str(item[0]) + "\t" + str(item[1]) + "\n")
+	return printList
 
 
 # Calculates the page rank for all nodes in a graph
@@ -164,7 +168,7 @@ def sim_rank(graphOrig, startNode):
 	return ranks
 
 
-# Runs one loop for calculating our page rankings
+# Runs one pass for calculating our page rankings
 def run_markov(ranks, graph, origGraph, numKeys, removed, startNode):
 	newRanks = {}
 
@@ -182,11 +186,8 @@ def run_markov(ranks, graph, origGraph, numKeys, removed, startNode):
 		# probability = ranks[key] * taxVal / len(connections)
 		# Add this probability to the chance of being at that node after this iteration
 		for nodeKey in connections:
-			# newRanks[nodeKey] = newRanks[nodeKey] + probability
 			newRanks[nodeKey] = newRanks[nodeKey] + ranks[key] * taxVal *\
 								graph.weights[(key, nodeKey)] / graph.nodeOutWeightsTotal[key]
-			# print(graph.weights[(key, nodeKey)] / graph.nodeOutWeightsTotal[key], graph.weights[(key, nodeKey)], graph.nodeOutWeightsTotal[key])
-			# sleep(.1)
 
 	# Update values for all our dead-end nodes
 	rank_dead_ends(ranks, newRanks, origGraph, removed)
@@ -203,9 +204,22 @@ def rank_dead_ends(ranks, newRanks, origGraph, removed):
 		newRanks[node] = newRank
 
 
-def main_a2():
+# Use this when importing to another file
+# infile, outfile: paths (relative or absolute)
+# startNode: name of entity to use as the primary node for simrank
+# returns ordered list of ranks as tuples: (rank, nodeID)
+def simrank_runner(infile, startNode, outfile="sim_rank.tsv"):
+	graph = WeightedDirectedGraph()
+	graph.build_from_file(infile)
+	ranks = sim_rank(graph, startNode)
+	readableRanks = print_sim_rank(outfile, ranks)
+	return readableRanks
+
+
+# Running simrank from the command line, accepting arguments for filenames
+def main_simrank():
 	# Parse files if provided
-	infile = "data\merchandise_values_annual_dataset.csv"
+	infile = "..\data\merchandise_values_annual_dataset.csv"
 	outfile = "similarity.tsv"
 	if len(sys.argv) > 1:
 		infile = sys.argv[1]
@@ -238,4 +252,4 @@ def main_a2():
 
 
 if __name__ == '__main__':
-	main_a2()
+	main_simrank()

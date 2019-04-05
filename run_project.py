@@ -8,11 +8,20 @@ from refactored_code_gaby.network_analysis.page_rank import PageRank
 from refactored_code_gaby.itemsets.itemsets import Itemsets
 from refactored_code_gaby.itemsets.frequent_items.find_frequent_items import FindFrequentItems
 
+from refactored_code_greg.weighted_jaccard import weighted_jaccard
+from refactored_code_greg.simrank import simrank_runner
 
 # Change these if you only want to run part of this script
 RUN_PAGERANK = False
-RUN_ASSOCIATION_RULES = True
+RUN_ASSOCIATION_RULES = False
 RUN_COUNTING_TRIANGLES = False
+RUN_KAGGLE_COMPARISON = True
+RUN_DEGREES = True
+
+RUN_JACCARD = True
+JACCARD_NODEID = "Canada"       # Country to compare to for Jaccard similarity
+RUN_SIMRANK = True
+SIMRANK_NODEID = "Canada"       # Country to compare to for simRank similarity
 
 # Constants
 ROOT_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -124,13 +133,42 @@ if __name__ == '__main__':
             ))
 
     # =============
+    # KAGGLE VS WTO DATASET
+    # ================
+    if RUN_KAGGLE_COMPARISON:
+        print("Kaggle comparison not implemented yet")
+        #TODO
+
+    # =============
+    # NETWORK DEGREE
+    # ================
+    if RUN_DEGREES:
+        print("Degrees not implemented yet")
+        # TODO
+
+    # =============
     # JACCARD SIMILARITY FOR BAGS
     # ================
-    # TODO
+    if RUN_JACCARD:
+        print("Running Jaccard similarity for", JACCARD_NODEID)
+        print("This identifies whether two countries have a similar economic base")
+        # Note: data is printed inside this call
+        weighted_jaccard(SIMRANK_NODEID, 10, "jaccard_output.tsv", DATA_FILE)
+        print("Complete data written to \"jaccard_output.tsv\"\n")
 
     # =============
     # WEIGHTED SIM RANK
     # ================
-    # TODO
+    if RUN_SIMRANK:
+        print("Running simRank for", SIMRANK_NODEID)
+        print("This identifies where a country depends on for exporting their merchandise to")
+        ranks = simrank_runner(DATA_FILE, SIMRANK_NODEID, "simrank_output.tsv")
+        if len(ranks) > 10:
+            print("Top 10 entities by simRank:")
+            for i in range(10):
+                print(ranks[i])
+            print("Complete data written to \"simrank_output.tsv\"\n")
+        else:
+            print("simRank output unexpectedly short. Verify provided nodeID and rerun\n")
 
     print('Done! We hope you enjoyed exploring the Global Trade Network with us!')

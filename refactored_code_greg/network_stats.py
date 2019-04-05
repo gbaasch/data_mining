@@ -1,10 +1,14 @@
 import matplotlib.pyplot as plt
 import os
-from simrank import WeightedDirectedGraph
+
+try:
+	from simrank import WeightedDirectedGraph
+except ModuleNotFoundError:
+	from refactored_code_greg.simrank import WeightedDirectedGraph
 
 
 path = "C:/Workspace/data_mining/output-data"
-categories = [
+categoriesNS = [
     'Agricultural products', 'Manufactures',
     'Fuels and mining products', 'Food', 'Clothing', 'Textiles',
     'Office and telecom equipment', 'Chemicals',
@@ -160,7 +164,7 @@ def count_sources(graph):
 
 
 def degree_by_country():
-	inpath = "data/merchandise_values_annual_dataset.csv"
+	inpath = "../data/merchandise_values_annual_dataset.csv"
 	startIndex = 1948
 	graphs = []
 	mainGraph = DirectedGraph()
@@ -188,8 +192,13 @@ def degree_by_country():
 			annualDegrees.append(degree)
 		plt.plot(years, annualDegrees)
 
+	plt.suptitle("Degree by country")
+	plt.xlabel("year")
+	plt.ylabel("degree")
+
 	plt.axis([2000, 2018, 0, 35])
 	plt.show()
+
 
 
 def degree_by_commodity():
@@ -198,12 +207,12 @@ def degree_by_commodity():
 	# Initialize our lists of lists
 	catGraphs = []
 	catDegrees = []
-	for cat in categories:
+	for cat in categoriesNS:
 		catGraphs.append([])
 		catDegrees.append([])
 
 	for year in years:
-		for i, cat in enumerate(categories):
+		for i, cat in enumerate(categoriesNS):
 			cat = cat.replace(" ", "_")
 			filename = os.path.join(path, str(year), "categorical/exports-" + str(year) + '-' + str(year) +
 									"-category-" + cat + ".tsv")
@@ -222,7 +231,7 @@ def degree_by_commodity():
 	for i, degreeList in enumerate(catDegrees):
 		plt.plot(years, degreeList)
 		if degreeList[-5] > 10:
-			print(categories[i], degreeList[-5])
+			print(categoriesNS[i], degreeList[-5])
 
 	# count = 0
 	# for key in catGraphs[10][0].forwardEdges.keys():
@@ -235,6 +244,11 @@ def degree_by_commodity():
 	# plt.setp(lines, color="r")
 	# plt.plot([1, 2, 3, 4], [4, 1, 7, 2])
 	# plt.axis([0, 6, 0, 20])
+
+	plt.suptitle("Average degree by commodity")
+	plt.xlabel("year")
+	plt.ylabel("degree")
+
 	plt.axis([2000, 2018, 0, 25])
 	plt.show()
 
