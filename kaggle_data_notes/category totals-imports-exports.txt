@@ -1,4 +1,3 @@
-C:\Python37-32\python.exe C:/Workspace/data_mining/compare_data_sets.py
 exports (USD)	import/export ratio	category name
 371844247790 	 0.9157457384154739 	 01_live_animals
 1177053980891 	 0.8631847907076465 	 02_meat_and_edible_meat_offal

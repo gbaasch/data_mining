@@ -9,7 +9,7 @@ except ModuleNotFoundError:
 
 path = "C:/Workspace/data_mining/output-data"
 categoriesNS = [
-    'Agricultural products', 'Manufactures',
+    'Total merchandise', 'Agricultural products', 'Manufactures',
     'Fuels and mining products', 'Food', 'Clothing', 'Textiles',
     'Office and telecom equipment', 'Chemicals',
     'Machinery and transport equipment', 'Iron and steel',
@@ -121,66 +121,57 @@ class DirectedGraph:
 			for src in srcNodes:
 				self.remove_edge(src, dst)
 
+	def build_from_file(filename):
+		with open(filename, 'r') as inFile:
+			for line in inFile.readlines():
+				split = line.split("\t")
+				# Ignore lines that don't follow the expected input format
+				if not len(split) == 3:
+					continue
+				self.add_edge(split[0], split[1])
+
 
 # -------------------------------------------------------------------
 
 
-def read_graph(filename):
-	graph = DirectedGraph()
-	with open(filename, 'r') as inFile:
-		for line in inFile.readlines():
-			split = line.split("\t")
-			# Ignore lines that don't follow the expected input format
-			if not len(split) == 3:
-				continue
-			graph.add_edge(split[0], split[1])
-	return graph
-
-
-def calc_average_degree_commodity(graph):
+# returns the degree of a provided graph
+# input: either a DirectedGraph or a WeightedDirectedGraph
+def calc_average_degree(graph):
 	totalNodes = len(graph.forwardEdges.keys())
+	# catch empty graph
 	if totalNodes == 0:
 		return 0
+
+	# Calculate average degree
 	totalDegree = 0
 	for key in graph.forwardEdges.keys():
 		totalDegree += len(graph.forwardEdges[key])
 	return totalDegree / totalNodes
 
 
-def count_destinations(graph):
-	totalDestinations = 0
-	for key in graph.backEdges.keys():
-		if len(graph.backEdges[key]) > 0:
-			totalDestinations += 1
-	return totalDestinations
-
-
-def count_sources(graph):
-	totalSources = 0
-	for key in graph.forwardEdges.keys():
-		if len(graph.forwardEdges[key]) > 0:
-			totalSources += 1
-	return totalSources
-
-
-def degree_by_country():
-	inpath = "../data/merchandise_values_annual_dataset.csv"
+# Calculates and plots the degree of each country over time
+def degree_by_country(inpath="../data/merchandise_values_annual_dataset.csv"):
 	startIndex = 1948
 	graphs = []
+	# build an overall graph, and one for each year
 	mainGraph = DirectedGraph()
 	for i in range(1948, 2018):
 		graphs.append(DirectedGraph())
 
+	# Read the file
 	with open(inpath, 'r') as inFile:
 		for line in inFile.readlines():
 			split = line.split('","')
 			# Ignore lines that don't follow the expected input format
 			if not len(split) == 14 or not split[7].startswith("Exports"):
 				continue
+
+			# Insert edge into both the yearly graph and the main graph
 			year = int(split[8])
 			graphs[year-startIndex].add_edge(split[1], split[3])
 			mainGraph.add_edge(split[1], split[3])
 
+	# Calculate the degree of each country over each year
 	countries = mainGraph.forwardEdges.keys()
 	years = range(1990, 2017)
 	for country in countries:
@@ -190,86 +181,89 @@ def degree_by_country():
 			if country in graphs[year-startIndex].forwardEdges:
 				degree = len(graphs[year-startIndex].forwardEdges[country])
 			annualDegrees.append(degree)
+		# Add each country's degree to the plot
 		plt.plot(years, annualDegrees)
 
+	# Add labels to the plot
 	plt.suptitle("Degree by country")
 	plt.xlabel("year")
 	plt.ylabel("degree")
 
+	# Set axis and display the plot
 	plt.axis([2000, 2018, 0, 35])
 	plt.show()
 
 
+# Calculates and plots the average degree of all countries by commodity over time
+def degree_by_commodity(inpath="../data/merchandise_values_annual_dataset.csv"):
+	# grab data across years. We only have good data since 2000 for commodities
+	years = range(2000, 2018)
 
-def degree_by_commodity():
-	# grab data across years
-	years = range(1990, 2018)
-	# Initialize our lists of lists
+	# build a graph for each commodity, for each year
 	catGraphs = []
-	catDegrees = []
-	for cat in categoriesNS:
-		catGraphs.append([])
-		catDegrees.append([])
-
 	for year in years:
-		for i, cat in enumerate(categoriesNS):
-			cat = cat.replace(" ", "_")
-			filename = os.path.join(path, str(year), "categorical/exports-" + str(year) + '-' + str(year) +
-									"-category-" + cat + ".tsv")
+		oneYearGraphs = []
+		for cat in categoriesNS:
+			oneYearGraphs.append(DirectedGraph())
+		catGraphs.append(oneYearGraphs)
 
-			graph = read_graph(filename)
-			catGraphs[i].append(graph)
-			catDegrees[i].append(calc_average_degree_commodity(graph))
+	# Read the file
+	with open(inpath, 'r') as inFile:
+		for line in inFile.readlines():
+			split = line.split('","')
+			# Ignore lines that don't follow the expected input format
+			if not len(split) == 14 or not split[7].startswith("Exports"):
+				continue
 
-	# some demo work
-	# print(path)
-	graph = read_graph(path + "/categorical/exports-1950-2017-category-None.tsv")
-	# print(calc_average_degree(graph))
-	# print(count_sources(graph), count_destinations(graph))
-	# print(len(graph.forwardEdges.keys()))
+			year = int(split[8])
+			# Skip years out of range
+			if year < years[0] or year > years[-1]:
+				continue
+			# Insert edge into the correct year/commodity graph
+			com_index = categoriesNS.index(split[5])
+			catGraphs[year - years[0]][com_index].add_edge(split[1], split[3])
 
-	for i, degreeList in enumerate(catDegrees):
-		plt.plot(years, degreeList)
-		if degreeList[-5] > 10:
-			print(categoriesNS[i], degreeList[-5])
+	# build a graph for each commodity, for each year
+	catDegrees = []
+	for j, cat in enumerate(categoriesNS):
+		oneCatDegrees = []
+		for i, year in enumerate(years):
+			oneCatDegrees.append(calc_average_degree(catGraphs[i][j]))
+		catDegrees.append(oneCatDegrees)
+		plt.plot(years, oneCatDegrees)
 
-	# count = 0
-	# for key in catGraphs[10][0].forwardEdges.keys():
-	# 	# if len(graph.forwardEdges[key]) > 0:
-	# 	print(key)
-	# 	count += 1
-	# print("\n", count)
-
-	# lines = plt.plot([1, 2, 3, 4], [1, 4, 9, 16])
-	# plt.setp(lines, color="r")
-	# plt.plot([1, 2, 3, 4], [4, 1, 7, 2])
-	# plt.axis([0, 6, 0, 20])
-
+	# Add labels to the plot
 	plt.suptitle("Average degree by commodity")
 	plt.xlabel("year")
 	plt.ylabel("degree")
 
+	# Set axis and display the plot
 	plt.axis([2000, 2018, 0, 25])
 	plt.show()
 
 
-def totals_by_entity():
-	inpath = "data/merchandise_values_annual_dataset.csv"
+# Calculates and prints (to console) the relative values of all goods exported by each country
+def totals_by_entity(inpath="../data/merchandise_values_annual_dataset.csv"):
 	graph = WeightedDirectedGraph()
 	total = 0.0
+
+	# build graph, and track total exports recorded
 	with open(inpath, 'r') as inFile:
 		for line in inFile.readlines():
 			split = line.split('","')
 			# Ignore lines that don't follow the expected input format
 			if not len(split) == 14 or not split[7].startswith("Exports") or int(split[8]) < 2000:
 				continue
+
 			graph.add_edge(split[1], split[3], float(split[10]))
 			total += float(split[10])
 
+	# Rank countries based on relative exports
 	revenue_ranks = []
 	for country in graph.forwardEdges.keys():
 		revenue_ranks.append((graph.nodeOutWeightsTotal[country] / total, country))
 
+	# Print countries and revenue proportions to console, in order
 	revenue_ranks.sort(reverse=True)
 	for rank in revenue_ranks:
 		print(rank)
@@ -277,6 +271,6 @@ def totals_by_entity():
 
 
 if __name__ == '__main__':
-	# degree_by_country()
+	degree_by_country()
 	degree_by_commodity()
-	# totals_by_entity()
+	totals_by_entity()

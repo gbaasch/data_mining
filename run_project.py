@@ -8,6 +8,7 @@ from refactored_code_gaby.network_analysis.page_rank import PageRank
 from refactored_code_gaby.itemsets.itemsets import Itemsets
 from refactored_code_gaby.itemsets.frequent_items.find_frequent_items import FindFrequentItems
 
+from refactored_code_greg.network_stats import degree_by_commodity, degree_by_country
 from refactored_code_greg.weighted_jaccard import weighted_jaccard
 from refactored_code_greg.simrank import simrank_runner
 
@@ -18,9 +19,9 @@ RUN_COUNTING_TRIANGLES = False
 RUN_KAGGLE_COMPARISON = True
 RUN_DEGREES = True
 
-RUN_JACCARD = True
+RUN_JACCARD = False
 JACCARD_NODEID = "Canada"       # Country to compare to for Jaccard similarity
-RUN_SIMRANK = True
+RUN_SIMRANK = False
 SIMRANK_NODEID = "Canada"       # Country to compare to for simRank similarity
 
 # Constants
@@ -143,8 +144,10 @@ if __name__ == '__main__':
     # NETWORK DEGREE
     # ================
     if RUN_DEGREES:
-        print("Degrees not implemented yet")
-        # TODO
+        print("Calculating network degrees...")
+        degree_by_country(DATA_FILE)
+        degree_by_commodity(DATA_FILE)
+        print("Done calculating degrees\n")
 
     # =============
     # JACCARD SIMILARITY FOR BAGS
