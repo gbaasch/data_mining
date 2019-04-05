@@ -119,7 +119,7 @@ if __name__ == '__main__':
             triangle_data.append([year, triangles, expected_triangles, nodes, edges])
         df = pd.DataFrame(triangle_data,
                           columns=['year', 'triangles', 'expected_triangles', 'num_nodes', 'num_edges'])
-        df.to_csv('output-data/triangles_new.csv')
+        df.to_csv('triangles_new.csv')
 
     # =============
     # FREQUENT ITEMS AND ASSOCIATION RULE MINING

@@ -9,7 +9,7 @@ Our data analysis process was interactive and iterative so, unlike a predictor, 
 We had many scratch files that we used for data exploration but we condensed and deleted them for your ease of use.
 Instead we have included a script that outputs some of the the results that we have included in the report.
 We have also attached a Jupyter notebook that we used for data exploration and visualization.
-Note that we used the Jupyter notebooks as sandbox environments so it may not run out of the box. Even so, it may be a useful reference for our visualizations.
+Note that we used the Jupyter notebooks as sandbox environments so they may not run out of the box. Even so, it may be a useful reference for our visualizations.
 
 If you only want to run certain parts of the script alter the boolean variables at the top of run_project.py
 
