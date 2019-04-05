@@ -8,15 +8,7 @@
       <change afterPath="$PROJECT_DIR$/gaby_can_delete/link_analysis/page_rank.py" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/gaby_can_delete/link_analysis/test_page_rank.tsv" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/gaby_can_delete/link_analysis/utils.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/eda.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/eda.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/refactored_code_greg/network_stats.py" beforeDir="false" afterPath="$PROJECT_DIR$/refactored_code_greg/network_stats.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/refactored_code_greg/simrank.py" beforeDir="false" afterPath="$PROJECT_DIR$/refactored_code_greg/simrank.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/refactored_code_greg/weighted_jaccard.py" beforeDir="false" afterPath="$PROJECT_DIR$/refactored_code_greg/weighted_jaccard.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run_project.py" beforeDir="false" afterPath="$PROJECT_DIR$/run_project.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scratch_totals_by_category.py" beforeDir="false" afterPath="$PROJECT_DIR$/scratch_totals_by_category.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/total_.py" beforeDir="false" afterPath="$PROJECT_DIR$/total_.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -44,21 +36,23 @@
         <counts>
           <entry key="csv" value="13" />
           <entry key="gitignore" value="4" />
+          <entry key="ipynb" value="1" />
           <entry key="md" value="1" />
           <entry key="png" value="3" />
-          <entry key="py" value="94" />
+          <entry key="py" value="96" />
           <entry key="tex" value="1" />
           <entry key="tsv" value="73" />
-          <entry key="txt" value="4" />
+          <entry key="txt" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CSV" value="11" />
+          <entry key="IPNB" value="1" />
           <entry key="Image" value="3" />
           <entry key="Markdown" value="1" />
-          <entry key="PLAIN_TEXT" value="73" />
-          <entry key="Python" value="94" />
+          <entry key="PLAIN_TEXT" value="74" />
+          <entry key="Python" value="96" />
           <entry key="TSV" value="11" />
         </counts>
       </usages-collector>
@@ -68,31 +62,67 @@
           <entry key="csv" value="1" />
           <entry key="dummy" value="23" />
           <entry key="gitignore" value="25" />
-          <entry key="py" value="13660" />
-          <entry key="txt" value="1518" />
+          <entry key="py" value="13672" />
+          <entry key="txt" value="1651" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CSV" value="1" />
-          <entry key="PLAIN_TEXT" value="1566" />
-          <entry key="Python" value="14176" />
+          <entry key="PLAIN_TEXT" value="1699" />
+          <entry key="Python" value="14188" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5953372">
+    <splitter split-orientation="horizontal" split-proportion="0.8664193">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/run_project.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="375">
-                  <caret line="125" column="22" lean-forward="true" selection-start-line="125" selection-start-column="22" selection-end-line="125" selection-end-column="22" />
+                <state relative-caret-position="-1274">
+                  <caret line="14" column="41" selection-start-line="14" selection-start-column="41" selection-end-line="14" selection-end-column="41" />
                   <folding>
                     <element signature="e#0#19#0" expanded="true" />
                   </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/gaby_can_delete/kaggle_stats.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="-1815" />
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/gaby_can_delete/project_report.ipynb">
+              <provider selected="true" editor-type-id="ipnb-editor">
+                <state>
+                  <selected id="7" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/gaby_can_delete/total_.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="-2080">
+                  <folding>
+                    <element signature="e#0#31#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/readme.txt">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="165">
+                  <caret line="11" column="69" selection-start-line="11" selection-start-column="69" selection-end-line="11" selection-end-column="69" />
                 </state>
               </provider>
             </entry>
@@ -125,7 +155,7 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/gaby_can_delete/link_analysis/count_triangles.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="380">
+                <state relative-caret-position="457">
                   <caret line="108" column="4" selection-start-line="108" selection-start-column="4" selection-end-line="108" selection-end-column="45" />
                 </state>
               </provider>
@@ -206,19 +236,20 @@
         <option value="$PROJECT_DIR$/refactored_code_gaby/itemsets/example/test_itemsets.csv" />
         <option value="$PROJECT_DIR$/refactored_code_gaby/itemsets/example/example.py" />
         <option value="$PROJECT_DIR$/refactored_code_gaby/itemsets/itemsets.py" />
-        <option value="$PROJECT_DIR$/readme.txt" />
         <option value="$PROJECT_DIR$/refactored_code_gaby/network_analysis/page_rank.py" />
         <option value="$PROJECT_DIR$/refactored_code_gaby/network_analysis/directed_network.py" />
         <option value="$PROJECT_DIR$/refactored_code_greg/network_stats.py" />
         <option value="$PROJECT_DIR$/refactored_code_greg/simrank.py" />
         <option value="$PROJECT_DIR$/refactored_code_greg/weighted_jaccard.py" />
         <option value="$PROJECT_DIR$/run_project.py" />
+        <option value="$PROJECT_DIR$/readme.txt" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" fullScreen="true">
+  <component name="ProjectFrameBounds" extendedState="1">
+    <option name="y" value="23" />
     <option name="width" value="1280" />
-    <option name="height" value="800" />
+    <option name="height" value="709" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -234,11 +265,6 @@
               <item name="data_mining" type="b2602c69:ProjectViewProjectNode" />
               <item name="data_mining" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="data_mining" type="b2602c69:ProjectViewProjectNode" />
-              <item name="data_mining" type="462c0819:PsiDirectoryNode" />
-              <item name="output-data" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -250,16 +276,16 @@
     <property name="settings.editor.selected.configurable" value="preferences.sourceCode" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/refactored_code_gaby" />
+      <recent name="$PROJECT_DIR$" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/gaby_can_delete" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/refactored_code" />
       <recent name="$PROJECT_DIR$/output-data/page_ranks/by_year" />
       <recent name="$PROJECT_DIR$/similar-items" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/refactored_code_gaby" />
-      <recent name="$PROJECT_DIR$" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -389,10 +415,9 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1280" height="800" extended-state="0" />
-    <editor active="true" />
+    <frame x="0" y="23" width="1280" height="709" extended-state="1" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16282764" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1429706" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -403,9 +428,9 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49960285" weight="0.32876712" />
       <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.4980143" weight="0.32876712" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="8" sideWeight="0.85782367" visible="true" weight="0.25068492" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" sideWeight="0.85782367" visible="true" weight="0.17179903" />
       <window_info anchor="bottom" id="Python Console" order="9" sideWeight="0.48768863" weight="0.34246576" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.14217633" side_tool="true" visible="true" weight="0.25068492" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.14217633" side_tool="true" visible="true" weight="0.17179903" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -532,23 +557,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/kaggle_stats.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/pydevd.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="794">
-          <caret line="1663" selection-start-line="1663" selection-end-line="1663" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gaby_can_delete/similar_items/create_itemsets_file.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-471">
-          <caret line="31" column="4" selection-start-line="31" selection-start-column="4" selection-end-line="31" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/gaby_can_delete/similar_items/association_analysis.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
@@ -742,13 +750,6 @@
         <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/readme.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="163" selection-start-line="11" selection-start-column="163" selection-end-line="11" selection-end-column="163" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/refactored_code_gaby/itemsets/itemsets.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
@@ -870,18 +871,46 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/gaby_can_delete/link_analysis/count_triangles.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
+        <state relative-caret-position="457">
           <caret line="108" column="4" selection-start-line="108" selection-start-column="4" selection-end-line="108" selection-end-column="45" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/run_project.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="125" column="22" lean-forward="true" selection-start-line="125" selection-start-column="22" selection-end-line="125" selection-end-column="22" />
+        <state relative-caret-position="-1274">
+          <caret line="14" column="41" selection-start-line="14" selection-start-column="41" selection-end-line="14" selection-end-column="41" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gaby_can_delete/kaggle_stats.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1815" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gaby_can_delete/project_report.ipynb">
+      <provider selected="true" editor-type-id="ipnb-editor">
+        <state>
+          <selected id="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gaby_can_delete/total_.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2080">
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/readme.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="69" selection-start-line="11" selection-start-column="69" selection-end-line="11" selection-end-column="69" />
         </state>
       </provider>
     </entry>
