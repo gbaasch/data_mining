@@ -5,3 +5,4 @@ output-data/*
 .idea/workspace.xml
 .ipynb_checkpoints/
 .DS_Store
+*.pyc

@@ -15,7 +15,11 @@ If you only want to run certain parts of the script alter the boolean variables 
 
 To run the script simply use "python run_project.py". Output will display to the console.
 The dataset from WTO must be named "merchandise_values_annual_dataset.tsv", and placed in the data folder for the scripts to access it.
-The file can be downloaded from:
-_____________________________________________________*************************
+The file can be downloaded from (first download - "WTO merchandise trade values annual dataset"):
+https://www.wto.org/english/res_e/statis_e/trade_datasets_e.htm
+
+This project is built in Python 3.7 with the following dependencies, all of which can be installed using pip:
+ - pandas
+ - matplotlib
 
 We hope you enjoy our project!

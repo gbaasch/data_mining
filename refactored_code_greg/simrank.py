@@ -5,6 +5,7 @@ import sys
 import re
 
 # inverse probability of jumping
+# needs to be high because we only want dependencies going out a few nodes, not many in a row
 taxVal = 0.5
 
 # Struct for holding a directed graph.
