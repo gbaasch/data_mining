@@ -14,5 +14,8 @@ Note that we used the Jupyter notebooks as sandbox environments so they may not 
 If you only want to run certain parts of the script alter the boolean variables at the top of run_project.py
 
 To run the script simply use "python run_project.py". Output will display to the console.
+The dataset from WTO must be named "merchandise_values_annual_dataset.tsv", and placed in the data folder for the scripts to access it.
+The file can be downloaded from:
+_____________________________________________________*************************
 
 We hope you enjoy our project!
